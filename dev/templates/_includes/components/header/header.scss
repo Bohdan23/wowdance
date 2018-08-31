@@ -6,7 +6,7 @@
     @include m(1023) {
         height: 73px;
     }
-    @include m(768) {
+    @include m(767) {
         height: auto;
         padding-bottom: 20px;
     }
@@ -21,7 +21,7 @@
                 margin-top: -12px;
             }
         }
-        @include m(768) {
+        @include m(767) {
             flex-wrap: wrap;
             .logo__wrapper {
                 width: 100%;
@@ -43,7 +43,7 @@
         @include m(1023) {
             margin-right: -12px;
         }
-        @include m(768) {
+        @include m(767) {
             margin-right: 0px;
             width: 100%;
             justify-content: center;

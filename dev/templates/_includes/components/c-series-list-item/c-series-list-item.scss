@@ -29,7 +29,7 @@
 				padding-left: 22px;
 			}
 		}
-		@include m(768) {
+		@include m(767) {
 			margin-bottom: 17px;
 			width: 100%;
 			&:nth-child(2n+2) {

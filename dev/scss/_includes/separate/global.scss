@@ -31,7 +31,7 @@ a {
 			letter-spacing: -0.1px;
 			font-size: 1.6rem;
 		}
-		@include m(768) {
+		@include m(767) {
 			font-size: 1.3rem;
 		}
 	}
