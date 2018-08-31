@@ -1,0 +1,123 @@
+.c-series-list-item {
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		& + .c-series-list-item__wrapper {
+			margin-top: 28px;
+		}
+		@include m(1279) {
+			& + .c-series-list-item__wrapper {
+				margin-top: 21px;
+			}
+			&:last-child {
+				display: none;
+			}
+		}
+		@include m(1023) {
+			width: 49%;
+			flex-shrink: 0;
+			flex-wrap: nowrap;
+			display: flex;
+			margin-bottom: 20px;
+			& + .c-series-list-item__wrapper {
+				margin-top: 0;
+			}
+			&:last-child {
+				display: flex;
+			}
+			&:nth-child(2n+2) {
+				padding-left: 22px;
+			}
+		}
+		@include m(768) {
+			margin-bottom: 17px;
+			width: 100%;
+			&:nth-child(2n+2) {
+				padding-left: 0;
+			}
+		}
+	}
+	&__image {
+		width: 132px;
+		height: 74px;
+		border-radius: 4px;
+		position: relative;
+		display: block;
+		font-family: $main-font;
+		margin-right: 12px;
+		img {
+			border-radius: inherit;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.icon-play-control {
+			font-size: 3.214rem;
+		}
+		&:hover {
+			.icon-play-control {
+				opacity: 1;
+			}
+		}
+	}
+	&__duration {
+		position: absolute;
+		bottom: 4px;
+		right: 4px;
+		background-color: rgba(0,0,0,.7);
+		border-radius: 2px;
+		font-size: 0.714rem;
+		line-height: 1rem;
+		color: $white;
+		display: inline-block;
+		padding: 2px 4px;
+		font-family: $main-font;
+	}
+	&__info {
+		width: calc(100% - 144px);
+		margin-top: 2px;
+		&-name {
+			font-size: 0.85714rem;
+			line-height: 1.15rem;
+			color: $main-color;
+			font-family: $main-font;
+			font-weight: 600;
+			display: block;
+			margin-bottom: 4px;
+			transition: $transition_duration $transition_type;
+			&:hover {
+				color: $main-blue;
+			}
+		}
+		&-tag {
+			color: $dark-grey;
+			font-size: 0.8571rem;
+			line-height: 1.1428rem;
+			display: flex;
+			align-items: center;
+			font-family: $main-font;
+			& + .c-series-list-item__info-tag {
+				margin-left: 14px;
+				@include m(1023) {
+					margin-left: 11px;
+				}
+			}
+			&__wrapper {
+				display: flex;
+				align-items: center;
+				margin-top: 6px;
+			}
+			.icon {
+				color: $main-grey;
+			}
+			.icon-calendar {
+				font-size: 12px;
+				margin: 0 7px 0 2px;
+			}
+			.icon-views {
+				font-size: 10.67px;
+				margin: 0 6px 0 0;
+			}
+		}
+	}
+}

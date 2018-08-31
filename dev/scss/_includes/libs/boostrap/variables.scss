@@ -44,7 +44,8 @@
  $general-bright: $lite-violet;//violet
  
 
-$transition_duration: 0.7s;
+$transition_duration: 0.2s;
+$transition_type: ease-in-out;
 
 // Links
  //
@@ -61,6 +62,7 @@ $transition_duration: 0.7s;
 // Font, line-height, and color for body text, headings, and more.
 
 $headings-font-family: "stem";
+$main-font: 'Open Sans', sans-serif;
 
 $font-size-base: 1.4rem; // Assumes the browser default, typically `14px`
 
@@ -124,12 +126,17 @@ $sizes: (
 //
 // Style anchor elements.
 
-// $link-color:            $brand-primary !default;
-$link-color:            #00A5B6;
-$link-decoration:       none !default;
-// $link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-color:      darken($link-color, 15%);
-$link-hover-decoration: underline !default;
+// colors
+$main-blue: #2064DB;
+$main-grey: #CBCFD8;
+$pagination-static: rgba(203, 207, 216, .3);
+$pagination-static-hover: rgba(203, 207, 216, .6);
+$header-links-hover: #EFF0F3;
+$light-grey: rgba(203, 207, 216, .5);
+$dark-grey:	#9197A6;
+$main-color: #16181D;
+$white: #ffffff;
+$black: #000000;
 
 
 // Grid breakpoints
@@ -140,8 +147,8 @@ $sw-xx-min:0;//0
 $sw-xs-min:480px;//0//576
 // $sw-sm-min:768px;//576//768
 $sw-sm-min:768px;
-$sw-md-min:992px;//768
-$sw-lg-min:1200px;//1017
+$sw-md-min:1024px;//768
+$sw-lg-min:1280px;//1017
 
 $sw-xx-max:$sw-xs-min - 1px;//479px
 $sw-xs-max:$sw-sm-min - 1px;
@@ -180,9 +187,9 @@ $grid-gutter-widths: (
 $container-max-widths: (
  xs: 100%,
  // sm: 630px + $grid-gutter-width-base,//540 //last-768
- sm: 620px + $grid-gutter-width-device,//540 //last-768
+ sm: 726px + $grid-gutter-width-device,//540 //last-768
  md: 960px + $grid-gutter-width-base,//748
- lg: 960px + $grid-gutter-width-base,//1000
+ lg: 1110px + $grid-gutter-width-base,//1000
  //xl: 960px//1200
 );
 // @include _assert-ascending($container-max-widths, "$container-max-widths");

@@ -3,3 +3,60 @@
 	min-height: 100vh;
 	overflow: hidden;
 }
+
+.container {
+	// border: 1px solid red;
+}
+
+a {
+	text-decoration: none;
+}
+
+.bordered {
+	display: inline-block;
+	border-radius: 16px;
+	border: 1px solid $light-grey;
+	transition: $transition_duration $transition_type;
+	&:hover {
+		border-color: $main-grey;
+	}
+}
+
+.title {
+	&-big {
+		font-size: 2.8571rem;
+		line-height: 3.857rem;
+		font-weight: 700;
+		@include m(1023) {
+			letter-spacing: -0.1px;
+			font-size: 1.6rem;
+		}
+		@include m(768) {
+			font-size: 1.3rem;
+		}
+	}
+	&-middle {
+		font-size: 2.2857rem;
+		line-height: 3.14285rem;
+		font-weight: 700;
+		&.white-c {
+			color: $white;
+		}
+	}
+	&-small {
+		font-size: 1.5714rem;
+		line-height: 2.14286rem;
+		font-weight: 600;
+		&.white-c {
+			color: $white;
+		}
+		@include m(1279) {
+			line-height: 2.1rem;
+		}
+	}
+}
+.title-big, .title-middle, .title-small {
+	transition: $transition_duration $transition_type;
+	color: $main-color;
+	font-family: $main-font;
+}
