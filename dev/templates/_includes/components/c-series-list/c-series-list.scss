@@ -1,0 +1,33 @@
+.c-series-list {
+	&__wrapper {
+		width: 320px;
+		@include m(1279) {
+			width: 342px;
+		}
+		@include m(1023) {
+			order: 0;
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+}
+.see-all-videos {
+	width: 100%;
+	font-size: 1rem;
+	line-height: 1.3571rem;
+	color: $main-color;
+	width: 100%;
+	max-width: 285px;
+	padding: 11px 0;
+	display: inline-block;
+	display: none;
+	margin: 15px auto 0 auto;
+	text-align: center;
+	&:hover {
+		color: $main-color;
+	}
+	@include m(767) {
+		display: block;
+	}
+}

@@ -1,3 +1,112 @@
 .c-header{
-    
+    height: 80px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    @include m(1023) {
+        height: 73px;
+    }
+    @include m(767) {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    &-main__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo__wrapper {
+            display: flex;
+            align-items: center;
+            a {
+                margin-top: -12px;
+            }
+        }
+        @include m(767) {
+            flex-wrap: wrap;
+            .logo__wrapper {
+                width: 100%;
+                justify-content: center;
+                margin: 12px 0 17px 0;
+                img {
+                    max-width: 135px;
+                }
+            }
+        }
+	}
+    &-pagination {
+		display: flex;
+		align-items: center;
+		margin-left: -245px;
+        @include m(1279) {
+            margin-left: 0;
+        }
+        @include m(1023) {
+            margin-right: -12px;
+        }
+        @include m(767) {
+            margin-right: 0px;
+            width: 100%;
+            justify-content: center;
+        }
+		&__wrapper {
+			display: flex;
+			align-items: center;
+		}
+    	&__text {
+    		color: $dark-grey;
+    		font-size: 1rem;
+    		line-height: 1.357rem;
+    	}
+    	&__item {
+    		width: 32px;
+    		height: 32px;
+    		color: $main-color;
+    		font-size: 1.2857rem;
+    		line-height: 1.7857rem;
+    		background-color: $pagination-static;
+    		border-radius: 50%;
+    		text-decoration: none;
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		margin-left: 8px;
+    		transition: $transition_duration $transition_type;
+    		&:hover {
+    			background-color: $pagination-static-hover;
+    			color: $main-color;
+    		}
+    		&.active {
+    			background-color: $main-blue;
+    			color: $white;
+    		}
+    	}
+    }
+    &-links__wrapper {
+    	display: flex;
+        @include m(1023) {
+            display: none;
+        }
+		a {
+			color: $main-color;
+			line-height: 1.357rem;
+			font-size: 1rem;
+			font-weight: 600;
+            font-family: $main-font;
+            border-radius: 16px;
+            display: block;
+            padding: 6px 12px;
+            background-color: transparent;
+            transition: $transition_duration $transition_type;
+			& + a {
+				margin-left: 8px;
+			}
+			&:hover {
+				background-color: $header-links-hover;
+			}
+			&.active {
+				background-color: $main-blue;
+				color: $white;
+			}
+		}
+    }
 }

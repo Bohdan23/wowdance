@@ -1,0 +1,29 @@
+.c-news-today {
+	background-color: #ffffff;
+	padding: 56px 0 72px 0;
+	@include m(1279) {
+		padding: 30px 0 72px 0;
+	}
+	@include m(1023) {
+		padding: 21px 0 72px 0;
+	}
+	@include m(767) {
+		padding: 10px 0 72px 0;
+	}
+	.title-big {
+		margin-bottom: 32px;
+		@include m(1023) {
+			margin-bottom: 20px;
+		}
+		@include m(767) {
+			margin-bottom: 1px;
+		}
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		@include m(1023) {
+			flex-wrap: wrap;
+		}
+	}
+}

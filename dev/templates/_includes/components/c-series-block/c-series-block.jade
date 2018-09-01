@@ -1,0 +1,21 @@
+mixin c-series-block(data)
+	.c-series-block__wrapper
+		.c-series-block__video
+			a.c-series-block__video-href(href="javascript:void(0)")
+				img(src="s/images/tmp_file/series-big.jpg", alt="image")
+				span.c-series-block__video-duration 00:45
+				+svg('icon-play-control')
+		a.c-series-block__title-href(href="javascript:void(0)")
+			span.title-small Танцы: Мигель, хореографы и все учасницы сезона (Ленинград - Рыба) (сезон 4, серия 22)
+		.c-series-block__info
+			.c-series-block__info__wrapper
+				.c-series-block__info_pull-left
+					.c-series-block__info-item.date
+						+svg('icon-calendar')
+						span 24 Июня
+					.c-series-block__info-item.views
+						+svg('icon-views')
+						span 23 982
+				.c-series-block__info-item.tag
+					a.bordered(href="javascript:void(0)") Танцы (сезон 5)
+			span.c-series-block__info-advice Смотри премьеру нового сезона шоу "ТАНЦЫ" скоро на ТНТ

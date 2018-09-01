@@ -7,6 +7,16 @@
     fill: currentColor;
   }
   
+.icon-play-control {
+  display: block;
+  color: rgba(38, 42, 53, 0.97);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .6s ease;
+}
   /* ==========================================
   Single-colored icons can be modified like so:
   .icon-name {

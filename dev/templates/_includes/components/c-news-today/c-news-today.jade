@@ -1,0 +1,10 @@
+include ../c-series-block/c-series-block
+include ../c-series-list/c-series-list
+
+mixin c-news-today(data)
+	section.c-news-today
+		.container
+			h1.title-big Новинки сегодня
+			.c-news-today__wrapper
+				+c-series-block()
+				+c-series-list()
