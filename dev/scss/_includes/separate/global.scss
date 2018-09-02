@@ -39,8 +39,32 @@ a {
 		font-size: 2.2857rem;
 		line-height: 3.14285rem;
 		font-weight: 700;
+	    letter-spacing: 0.7px;
+		position: relative;
+		&:before {
+			display: block;
+			content: '';
+			width: 21px;
+			height: 15px;
+			background-image: url('../../s/images/useful/svg/titleimg.svg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: -18px;
+			top: -4px;
+		}
 		&.white-c {
 			color: $white;
+		}
+		@include m(1023) {
+			font-size: 1.6rem;
+			display: flex;
+    		justify-content: center;
+    		&:before {
+    			position: relative;
+    			left: auto;
+    			top: auto;
+    		}
 		}
 	}
 	&-small {

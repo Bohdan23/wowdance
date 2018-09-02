@@ -2,6 +2,7 @@ extends _includes/_extends/main
 
 include _includes/components/c-hero/c-hero
 include _includes/components/c-news-today/c-news-today
+include _includes/components/c-popular/c-popular
 
 block head
 	+head({title: 'Home'})
@@ -9,3 +10,4 @@ block head
 block content
 	+c-hero()
 	+c-news-today()
+	+c-popular()

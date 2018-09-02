@@ -13,6 +13,7 @@
 
 /* components */
 // components/js-header.js
+// components/js-texttrim.js
 
 // the main code
 
@@ -46,3 +47,21 @@ Moff.amd.register({
 	loadOnScreen: ['xs', 'sm', 'md', 'lg'],
 	onWindowLoad: true
 });
+if($('.c-series-list-item__info-name').length) {
+	Moff.amd.register({
+		id: 'dd',
+		// depend: {
+		// 	js: ['http://chat-domain.com/js/chat-api.js'],
+		// 	css: ['http://chat-domain.com/css/chat.css']
+		// },
+		file: {
+			js: ['s/js/components/js-texttrim.js']
+		},
+
+		beforeInclude: function() {},
+	    afterInclude: function() {},
+	    
+		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
+		onWindowLoad: true
+	});
+}
