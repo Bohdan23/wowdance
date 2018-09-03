@@ -20,7 +20,8 @@
     "perfect-scrollbar": "^0.6.16",
     "animate.css": "^3.5.2",
     "moff": "^1.11.1",
-    "jquery-validation": "^1.17.0"
+    "jquery-validation": "^1.17.0",
+    "slick-carousel": "^1.8.1"
   },
   "install": {
     "path": {

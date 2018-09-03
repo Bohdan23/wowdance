@@ -1,0 +1,67 @@
+include ../c-series-list/c-series-list
+
+mixin c-seasons(data)
+	.c-seasons__wrapper
+		if data.header
+			.c-seasons__header
+				span.c-seasons__title= data.title
+				.c-seasons__buttons-wrapper
+					.slick-control__wrapper(class='' + data.slickcontrolmode ? data.slickcontrolmode : '')
+						.slick-control-left
+							+svg('icon-slick-control')
+						.slick-control-right
+							+svg('icon-slick-control') 
+					a.c-seasons__watch-all-seasone.bordered(href="javascript:void(0)") Смотреть весь сезон
+		+c-series-list({
+			listitems: [
+				{
+					image: '7',
+					duration: '00:20',
+					name: 'Впервые в истории шоу',
+					date: '24 Июня',
+					views: '456',
+					description: true,
+					descriptiontext: 'Самый главный, самый последний главный'
+				},
+				{
+					image: '8',
+					duration: '03:55',
+					name: 'Танцы: Саша Горошко (Leela James - Soul Food) (сезон 4, серия 22)',
+					date: '10 Авг',
+					views: '9 056',
+					description: true,
+					descriptiontext: 'За пару шагов до финала учасника танцор Сергей'
+				},
+				{
+					image: '9',
+					duration: '00:20',
+					name: 'Танцы: Виталий Уливанов (снзон 4, серия 21)',
+					date: '1 Янв',
+					views: '456',
+					description: true,
+					descriptiontext: 'За пару шагов до финала учасника танцор Сергей'
+				},
+				{
+					image: '10',
+					duration: '04:50',
+					name: 'Впервые в истории шоу',
+					date: '2 Авг',
+					views: '23 111',
+					description: true,
+					descriptiontext: 'За пару шагов до финала учасника танцор Сергей'
+				},
+				{
+					image: '11',
+					duration: '02:36',
+					name: 'Танцы: Саша Горошко (Leela James - Soul Food) (сезон 4, серия 22)',
+					date: '30 Апр',
+					views: '9 506',
+					description: true,
+					descriptiontext: 'За пару шагов до финала учасника танцор Сергей'
+				}
+			],
+			wrapperclass: 'c-series-list__wrapper-seasons',
+			blockclass: 'c-series-list-item__season',
+			slickcontrol: true,
+			seeall: false
+		})

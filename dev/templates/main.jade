@@ -3,6 +3,7 @@ extends _includes/_extends/main
 include _includes/components/c-hero/c-hero
 include _includes/components/c-news-today/c-news-today
 include _includes/components/c-popular/c-popular
+include _includes/components/c-seasons/c-seasons
 
 block head
 	+head({title: 'Home'})
@@ -11,3 +12,8 @@ block content
 	+c-hero()
 	+c-news-today()
 	+c-popular()
+	.c-seasons__main-wrapper
+		.container
+			+c-seasons({
+				header: true
+			})

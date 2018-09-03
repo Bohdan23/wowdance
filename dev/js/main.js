@@ -47,15 +47,34 @@ Moff.amd.register({
 	loadOnScreen: ['xs', 'sm', 'md', 'lg'],
 	onWindowLoad: true
 });
+
 if($('.c-series-list-item__info-name').length) {
 	Moff.amd.register({
-		id: 'dd',
+		id: 'texttrim',
 		// depend: {
 		// 	js: ['http://chat-domain.com/js/chat-api.js'],
 		// 	css: ['http://chat-domain.com/css/chat.css']
 		// },
 		file: {
 			js: ['s/js/components/js-texttrim.js']
+		},
+
+		beforeInclude: function() {},
+	    afterInclude: function() {},
+	    
+		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
+		onWindowLoad: true
+	});
+}
+
+if($('.c-series-list__wrapper-popular').length) {
+	Moff.amd.register({
+		id: 'slick',
+		depend: {
+			js: ['bower_components/slick-carousel/slick/slick.min.js']
+		},
+		file: {
+			js: ['s/js/components/js-slick.js']
 		},
 
 		beforeInclude: function() {},

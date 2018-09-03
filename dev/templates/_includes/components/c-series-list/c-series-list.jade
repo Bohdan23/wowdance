@@ -17,5 +17,11 @@ mixin c-series-list(data)
 							span= listitem.views
 					if listitem.description
 						span.c-series-list-item__info-description= listitem.descriptiontext
-		if data.seeall
-			a(href="javascript:void(0)").see-all-videos.bordered Смотреть все новинки
+	if data.slickcontrol
+		.slick-control__wrapper(class='' + data.slickcontrolclass ? data.slickcontrolclass : '')
+			.slick-control-left
+				+svg('icon-slick-control')
+			.slick-control-right
+				+svg('icon-slick-control')
+	if data.seeall
+		a(href="javascript:void(0)").see-all-videos.bordered Смотреть все новинки

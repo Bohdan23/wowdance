@@ -34,3 +34,9 @@
 		margin-top: 40px;
 	}
 }
+
+@include mn(768) {
+	.control-popular {
+		display: none;
+	}
+}
