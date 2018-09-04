@@ -11,17 +11,17 @@ mixin c-series-list(data)
 					.c-series-list-item__info-tag__wrapper
 						.c-series-list-item__info-tag
 							+svg('icon-calendar')
-							span= listitem.date
+							span.tag-date= listitem.date
 						.c-series-list-item__info-tag
 							+svg('icon-views')
-							span= listitem.views
+							span.tag-views= listitem.views
 					if listitem.description
 						span.c-series-list-item__info-description= listitem.descriptiontext
 	if data.slickcontrol
 		.slick-control__wrapper(class='' + data.slickcontrolclass ? data.slickcontrolclass : '')
-			.slick-control-left
+			.slick-control-left(class='' + data.leftcontrol)
 				+svg('icon-slick-control')
-			.slick-control-right
+			.slick-control-right(class='' + data.rightcontrol)
 				+svg('icon-slick-control')
 	if data.seeall
 		a(href="javascript:void(0)").see-all-videos.bordered Смотреть все новинки

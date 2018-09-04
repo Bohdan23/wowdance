@@ -4,14 +4,14 @@ mixin c-seasons(data)
 	.c-seasons__wrapper
 		if data.header
 			.c-seasons__header
-				span.c-seasons__title= data.title
+				span.title-middle= data.title
 				.c-seasons__buttons-wrapper
 					.slick-control__wrapper(class='' + data.slickcontrolmode ? data.slickcontrolmode : '')
-						.slick-control-left
+						.slick-control-left(class='' + data.leftcontrol)
 							+svg('icon-slick-control')
-						.slick-control-right
+						.slick-control-right(class='' + data.rightcontrol)
 							+svg('icon-slick-control') 
-					a.c-seasons__watch-all-seasone.bordered(href="javascript:void(0)") Смотреть весь сезон
+						a.c-seasons__watch-all-seasone.bordered(href="javascript:void(0)") Смотреть весь сезон
 		+c-series-list({
 			listitems: [
 				{
@@ -58,9 +58,27 @@ mixin c-seasons(data)
 					views: '9 506',
 					description: true,
 					descriptiontext: 'За пару шагов до финала учасника танцор Сергей'
+				},
+				{
+					image: '7',
+					duration: '00:20',
+					name: 'Впервые в истории шоу',
+					date: '24 Июня',
+					views: '456',
+					description: true,
+					descriptiontext: 'Самый главный, самый последний главный'
+				},
+				{
+					image: '8',
+					duration: '03:55',
+					name: 'Танцы: Саша Горошко (Leela James - Soul Food) (сезон 4, серия 22)',
+					date: '10 Авг',
+					views: '9 056',
+					description: true,
+					descriptiontext: 'За пару шагов до финала учасника танцор Сергей'
 				}
 			],
-			wrapperclass: 'c-series-list__wrapper-seasons',
+			wrapperclass: data.wrapperc,
 			blockclass: 'c-series-list-item__season',
 			slickcontrol: false,
 			seeall: false

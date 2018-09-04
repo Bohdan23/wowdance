@@ -16,6 +16,10 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: .6s ease;
+  transition: $transition_duration $transition_type;
+  &:hover {
+    color: rgba(32, 100, 219, 0.97);
+  }
 }
   /* ==========================================
   Single-colored icons can be modified like so:

@@ -76,6 +76,7 @@ a {
 		font-size: 1.5714rem;
 		line-height: 2.14286rem;
 		font-weight: 600;
+		display: block;
 		&.white-c {
 			color: $white;
 		}
@@ -96,20 +97,40 @@ a {
 	justify-content: center;
 	align-items: center;
 	margin-top: 8px;
+	&_dark {
+		margin-top: 0;
+		.slick-control-left, .slick-control-right {
+			border-color: rgba(203, 207, 216, .5);
+			&:hover {
+				border-color: $main-grey;
+			}
+		}
+		.icon {
+			color: $main-color !important;
+		}
+	}
 }
 .slick-control-left, .slick-control-right {
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
-	border: 1px solid $main-grey;
+	border: 1px solid rgba(203, 207, 216, .5);
 	opacity: 1;
 	transition: $transition_duration $transition_type;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+	&:hover {
+		border-color: $main-grey;
+	}
 	&.slick-disabled {
 		opacity: 0.5;
+		cursor: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjMgMjYuMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjMgMjYuMzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiMzNjNCM0U7fS5zdDF7ZmlsbDpub25lO3N0cm9rZTojRkZGRkZGO3N0cm9rZS1vcGFjaXR5OjAuODt9LnN0MntmaWxsOiNGRkZGRkY7ZmlsdGVyOnVybCgjQWRvYmVfT3BhY2l0eU1hc2tGaWx0ZXIpO30uc3Qze21hc2s6dXJsKCNwYXRoLTMtb3V0c2lkZS0xXzFfKTtmaWxsOiNGRkZGRkY7ZmlsbC1vcGFjaXR5OjAuODt9PC9zdHlsZT48Zz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTEuNiw2LjRMMS40LDEuN2wyLjQsMTAuOWwyLjktNC4zTDExLjYsNi40eiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMS44LDYuOGwxLjEtMC40bC0xLjEtMC41TDEuNiwxLjNMMC43LDAuOWwwLjIsMWwyLjQsMTAuOWwwLjIsMS4xbDAuNy0xbDIuOS00LjJMMTEuOCw2Ljh6Ii8+PC9nPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNy41LDIyLjJjLTEsMC43LTIuMiwxLjEtMy41LDEuMWMtMy4zLDAtNi0yLjctNi02YzAtMS4zLDAuNC0yLjUsMS4xLTMuNUwxNy41LDIyLjJ6IE0xOC45LDIwLjhjMC43LTEsMS4xLTIuMiwxLjEtMy41YzAtMy4zLTIuNy02LTYtNmMtMS4zLDAtMi41LDAuNC0zLjUsMS4xTDE4LjksMjAuOHogTTE0LDI1LjNjNC40LDAsOC0zLjYsOC04cy0zLjYtOC04LThzLTgsMy42LTgsOFM5LjYsMjUuMywxNCwyNS4zeiIvPjxkZWZzPjxmaWx0ZXIgaWQ9IkFkb2JlX09wYWNpdHlNYXNrRmlsdGVyIiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjUiIHk9IjguMyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4Ij48ZmVDb2xvck1hdHJpeCAgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjEgMCAwIDAgMCAgMCAxIDAgMCAwICAwIDAgMSAwIDAgIDAgMCAwIDEgMCIvPjwvZmlsdGVyPjwvZGVmcz48bWFzayBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSI1IiB5PSI4LjMiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgaWQ9InBhdGgtMy1vdXRzaWRlLTFfMV8iPjxyZWN0IHg9IjUiIHk9IjguMyIgY2xhc3M9InN0MiIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4Ii8+PHBhdGggZD0iTTE3LjUsMjIuMmMtMSwwLjctMi4yLDEuMS0zLjUsMS4xYy0zLjMsMC02LTIuNy02LTZjMC0xLjMsMC40LTIuNSwxLjEtMy41TDE3LjUsMjIuMnogTTE4LjksMjAuOGMwLjctMSwxLjEtMi4yLDEuMS0zLjVjMC0zLjMtMi43LTYtNi02Yy0xLjMsMC0yLjUsMC40LTMuNSwxLjFMMTguOSwyMC44eiBNMTQsMjUuM2M0LjQsMCw4LTMuNiw4LThzLTMuNi04LTgtOHMtOCwzLjYtOCw4UzkuNiwyNS4zLDE0LDI1LjN6Ii8+PC9tYXNrPjxwYXRoIGNsYXNzPSJzdDMiIGQ9Ik05LjEsMTMuOGwwLjctMC43TDksMTIuM2wtMC43LDFMOS4xLDEzLjh6IE0xMC41LDEyLjRsLTAuNi0wLjhsLTEsMC43bDAuOCwwLjhMMTAuNSwxMi40eiBNMTYuOSwyMS40Yy0wLjgsMC42LTEuOCwwLjktMi45LDAuOXYyYzEuNSwwLDIuOS0wLjUsNC4xLTEuM0wxNi45LDIxLjR6IE0xNCwyMi4zYy0yLjgsMC01LTIuMi01LTVIN2MwLDMuOSwzLjEsNyw3LDdWMjIuM3ogTTksMTcuM2MwLTEuMSwwLjMtMi4xLDAuOS0yLjlsLTEuNi0xLjJDNy41LDE0LjQsNywxNS44LDcsMTcuM0g5eiBNOC40LDE0LjVsOC40LDguNGwxLjQtMS40bC04LjQtOC40TDguNCwxNC41eiBNMTkuNywyMS4zYzAuOC0xLjEsMS4zLTIuNSwxLjMtNC4xaC0yYzAsMS4xLTAuMywyLjEtMC45LDIuOUwxOS43LDIxLjN6IE0yMSwxNy4zYzAtMy45LTMuMS03LTctN3YyYzIuOCwwLDUsMi4yLDUsNUgyMXogTTE0LDEwLjNjLTEuNSwwLTIuOSwwLjUtNC4xLDEuM2wxLjIsMS42YzAuOC0wLjYsMS44LTAuOSwyLjktMC45VjEwLjN6IE05LjgsMTMuMWw4LjQsOC40bDEuNC0xLjRsLTguNC04LjRMOS44LDEzLjF6IE0xNCwyNi4zYzUsMCw5LTQsOS05aC0yYzAsMy45LTMuMSw3LTcsN1YyNi4zeiBNMjMsMTcuM2MwLTUtNC05LTktOXYyYzMuOSwwLDcsMy4xLDcsN0gyM3ogTTE0LDguM2MtNSwwLTksNC05LDloMmMwLTMuOSwzLjEtNyw3LTdWOC4zeiBNNSwxNy4zYzAsNSw0LDksOSw5di0yYy0zLjksMC03LTMuMS03LTdINXoiLz48L2c+PC9zdmc+'), auto;
+		cursor: not-allowed;
+		&:hover {
+			border-color: rgba(203, 207, 216, .5);
+		}
 	}
 	.icon {
 		font-size: 12px;

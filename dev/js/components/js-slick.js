@@ -1,44 +1,85 @@
 $(document).ready(function() {
-	function initSlick(elem, breakpoint) {
+	
+	var popularOptions = {
+			slidesToShow: 2,
+			centerMode: true,
+			prevArrow: '.control-popular-left',
+			nextArrow: '.control-popular-right',
+			responsive: [
+				{
+					breakpoint: 530,
+					settings: {
+						slidesToShow: 2,
+						centerMode: false
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						centerMode: true
+					}
+				},
+				{
+					breakpoint: 370,
+					settings: {
+						slidesToShow: 1,
+						centerMode: false
+					}
+				}
+			]
+		};
+	var seasonsOptions = {
+		slidesToShow: 5,
+		prevArrow: '',
+		nextArrow: '',
+		responsive: [
+			{
+				breakpoint: 1279,
+				settings: {
+					slidesToShow: 4
+				}
+			},
+			{
+				breakpoint: 1023,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 3,
+                	slidesToScroll: 1,
+                	vertical: true,
+                	verticalSwiping: true
+				}
+			}
+		]
+	}
+
+	function initSlick() {
 		if(window.innerWidth < 768) {
-			if (!$('.c-series-list__wrapper-popular').hasClass('slick-initialized')) {
-				$('.c-series-list__wrapper-popular').slick({
-					slidesToShow: 2,
-					centerMode: true,
-					prevArrow: '.slick-control-left',
-					nextArrow: '.slick-control-right',
-					responsive: [
-						{
-							breakpoint: 530,
-							settings: {
-								slidesToShow: 2,
-								centerMode: false
-							}
-						},
-						{
-							breakpoint: 480,
-							settings: {
-								slidesToShow: 1,
-								centerMode: true
-							}
-						},
-						{
-							breakpoint: 370,
-							settings: {
-								slidesToShow: 1,
-								centerMode: false
-							}
-						}
-					]
-				});
+			if (!$('.popular-slider').hasClass('slick-initialized')) {
+				$('.popular-slider').slick(popularOptions);
 			}
 	    } else{
-	    	if ($('.c-series-list__wrapper-popular').hasClass('slick-initialized')) {
-	        	$('.c-series-list__wrapper-popular').slick('unslick');
+	    	if ($('.popular-slider').hasClass('slick-initialized')) {
+	        	$('.popular-slider').slick('unslick');
 	    	}
 	    }
 	}
 
+	function initSlickSeasons(elem) {
+		$(elem).slick(seasonsOptions);
+	}
+
+
 	initSlick();
+	initSlickSeasons('.seasone-5-slider', seasonsOptions.prevArrow = '.control-seasone5-left', seasonsOptions.nextArrow = '.control-seasone5-right');
+	initSlickSeasons('.seasone-4-slider', seasonsOptions.prevArrow = '.control-seasone4-left', seasonsOptions.nextArrow = '.control-seasone4-right');
+	initSlickSeasons('.seasone-3-slider', seasonsOptions.prevArrow = '.control-seasone3-left', seasonsOptions.nextArrow = '.control-seasone3-right');
+	initSlickSeasons('.seasone-2-slider', seasonsOptions.prevArrow = '.control-seasone2-left', seasonsOptions.nextArrow = '.control-seasone2-right');
+	initSlickSeasons('.seasone-1-slider', seasonsOptions.prevArrow = '.control-seasone1-left', seasonsOptions.nextArrow = '.control-seasone1-right');
 	$(window).resize(initSlick);
 });

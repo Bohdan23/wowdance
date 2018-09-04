@@ -14,6 +14,7 @@
 /* components */
 // components/js-header.js
 // components/js-texttrim.js
+//=include components/js-preloader.js
 
 // the main code
 
@@ -67,7 +68,26 @@ if($('.c-series-list-item__info-name').length) {
 	});
 }
 
-if($('.c-series-list__wrapper-popular').length) {
+if($('.c-footer__accordeon-text').length) {
+	Moff.amd.register({
+		id: 'readMore',
+		// depend: {
+		// 	js: ['http://chat-domain.com/js/chat-api.js'],
+		// 	css: ['http://chat-domain.com/css/chat.css']
+		// },
+		file: {
+			js: ['s/js/components/js-read-more.js']
+		},
+
+		beforeInclude: function() {},
+	    afterInclude: function() {},
+	    
+		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
+		onWindowLoad: true
+	});
+}
+
+if($('.slider-init').length) {
 	Moff.amd.register({
 		id: 'slick',
 		depend: {

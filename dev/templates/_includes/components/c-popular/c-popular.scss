@@ -13,7 +13,18 @@
 		@include m(1023) {
 			padding: 46px 0 0 0;
 			.title-middle {
-				margin-bottom: 31px;
+				margin-bottom: 34px;
+			}
+		}
+		@include m(767) {
+			padding: 23px 0 0 0;
+			.title-middle {
+				margin-bottom: 25px;
+			}
+		}
+		@include mn(768) {
+			.slick-control__wrapper {
+				display: none;
 			}
 		}
 	}
@@ -21,7 +32,7 @@
 .banner__wrapper {
 	width: 100%;
 	height: 130px;
-	margin-top: 43px;
+	margin-top: 44px;
 	img {
 		width: 100%;
 		height: 100%;
@@ -33,10 +44,7 @@
 	@include m(1023) {
 		margin-top: 40px;
 	}
-}
-
-@include mn(768) {
-	.control-popular {
-		display: none;
+	@include m(768) {
+		margin-top: 33px;
 	}
 }

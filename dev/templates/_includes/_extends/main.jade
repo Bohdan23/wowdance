@@ -8,6 +8,7 @@ include ../helpers/_mixins
 include ../components/head/head
 include ../components/header/header
 include ../components/footer/footer
+include ../components/c-preloader/c-preloader
 
 //-----------   INCLUDES END  --------------
 
@@ -16,6 +17,7 @@ html(lang='en')
 	block head
 		+head({'title':'Hello'})
 	body
+		+c-preloader()
 		.l-wrapper
 			+header()
 			main

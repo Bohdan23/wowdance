@@ -23,6 +23,7 @@
         }
         @include m(767) {
             flex-wrap: wrap;
+            padding-top: 8px;
             .logo__wrapper {
                 width: 100%;
                 justify-content: center;
