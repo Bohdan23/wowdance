@@ -5,6 +5,7 @@
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
+    z-index: 5;
   }
   
 .icon-play-control {
@@ -17,6 +18,7 @@
   opacity: 0;
   transition: .6s ease;
   transition: $transition_duration $transition_type;
+  z-index: 5;
   &:hover {
     color: rgba(32, 100, 219, 0.97);
   }

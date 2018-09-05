@@ -91,6 +91,12 @@ a {
 	font-family: $main-font;
 }
 
+// main text
+.main-text {
+	font-size: 1rem;
+	line-height: 1.7128rem;
+}
+
 // slick controls
 .slick-control__wrapper {
 	display: flex;
