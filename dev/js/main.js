@@ -108,3 +108,11 @@ if($('.slider-init').length) {
 		onWindowLoad: true
 	});
 }
+
+
+$('.player-video__descr-link').click(function() {
+	$('.player-video__descr').toggleClass('player-video__descr_active');
+	// $('.toggle-btn').toggleClass('active');
+	// $('.wrapper').toggleClass('wrapper--bg');
+	// $('header').toggleClass('menu-active');
+});

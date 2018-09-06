@@ -44,5 +44,9 @@
         <symbol id="icon-slick-control" viewBox="0 0 8 14">
             <path d="M1 1L7 7L1 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
+       	<symbol id="icon-clock" viewBox="0 0 24 24">
+            <path fill="none" stroke="#CBCFD8" stroke-width="2" d="M12,3L12,3c5,0,9,4,9,9l0,0c0,5-4,9-9,9l0,0c-5,0-9-4-9-9l0,0C3,7,7,3,12,3z"/>
+			<path fill="#CBCFD8" d="M12,6c-0.6,0-1,0.4-1,1v5c0,0.1,0,0.1,0,0.2c0,0.3,0.2,0.7,0.5,0.8l3.1,1.8c0.5,0.3,1.1,0.1,1.4-0.4 c0.3-0.5,0.1-1.1-0.4-1.4L13,11.6V7C13,6.4,12.6,6,12,6z"/>
+        </symbol>
     </defs>
 </svg>

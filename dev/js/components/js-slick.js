@@ -133,7 +133,11 @@ $(document).ready(function() {
 
 
 	$('.seasons-list').slick({
-		slidesToShow: 4,
+		slidesToShow: 4.3,
+		infinite: true,
+		centerMode: false,
+		initialSlide: '1',
+		focusOnSelect: true,
 		slidesToScroll: 1,
 		arrows: false
 	});

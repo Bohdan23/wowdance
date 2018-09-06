@@ -6,19 +6,29 @@
 		margin-bottom: 24px;
 		display: flex;
 		&__item {
-			border-bottom: 2px solid #fff;
+			width: auto;
 			padding-bottom: 16px;
-			flex-shrink: 0;
+			border-bottom: 2px solid #fff;
+		    text-align: right;
 			&-title {
+				position: relative;
 				font-style: normal;
 				font-weight: 600;
 				line-height: normal;
 				font-size: 14px;
-				color: #16181D;
-				opacity: 0.3;
+				color: rgba(22, 24, 29, 0.3);
 			}
-			&.active {
-				border-bottom: 2px solid #2064DB;
+			// &.slick-current {
+			// 	transform: translateX(-50px)
+			// }
+
+			&.slick-current span:before {
+				content: "";
+				height: 2px;
+				width: 100%;
+				position: absolute;
+				bottom: -22px;
+				background-color: #2064DB;
 			}
 		}
 	}
@@ -30,4 +40,8 @@
 		font-size: 14px;
 		color: #9197A6;
 	}
+}
+
+.slick-track {
+	// transform: translate(0) !important;
 }
