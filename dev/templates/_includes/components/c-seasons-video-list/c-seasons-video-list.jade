@@ -3,21 +3,21 @@ include ../c-series-list/c-series-list
 mixin c-seasons-video-list(data)
 	.c-seasons-video-list
 		.seasons-list.slider-init
-			.seasons-list__item
+			.seasons-list__item(data-tab="tab-1")
 				span.seasons-list__item-title Сезон 1
-			.seasons-list__item
-				span.seasons-list__item-title.active Сезон 2
-			.seasons-list__item
+			.seasons-list__item(data-tab="tab-2")
+				span.seasons-list__item-title Сезон 2
+			.seasons-list__item(data-tab="tab-3")
 				span.seasons-list__item-title Сезон 3
-			.seasons-list__item
+			.seasons-list__item(data-tab="tab-4")
 				span.seasons-list__item-title Сезон 4
-			.seasons-list__item
+			.seasons-list__item(data-tab="tab-5")
 				span.seasons-list__item-title Сезон 5
-			.seasons-list__item
+			.seasons-list__item(data-tab="tab-6")
 				span.seasons-list__item-title Сезон 6
-			.seasons-list__item
+			.seasons-list__item(data-tab="tab-7")
 				span.seasons-list__item-title Сезон 7
-		.seasons-video-container
+		.seasons-video-container.current#tab-1
 			+c-series-list({
 				listitems: [
 					{
@@ -67,5 +67,310 @@ mixin c-seasons-video-list(data)
 				blockclass: 'c-series-list-item__simple',
 				seeall: true
 			})
+			a.seasons-video-container__all-season(href="#") Смотреть все выпуски сезона 1
+		.seasons-video-container#tab-2
+			+c-series-list({
+				listitems: [
+					{
+						image: '2',
+						duration: '03:55',
+						name: 'Танцы: Саша Горошко (Leela James - Soul Food) (сезон 4, серия 22)',
+						date: '10 Авг',
+						views: '9 056'
+					},
+					{
+						image: '1',
+						duration: '00:20',
+						name: 'Впервые в истории шоу',
+						date: '24 Июня',
+						views: '456'
+					},
+					{
+						image: '3',
+						duration: '00:20',
+						name: 'Танцы: Виталий Уливанов (снзон 4, серия 21)',
+						date: '1 Янв',
+						views: '456'
+					},
+					{
+						image: '4',
+						duration: '04:50',
+						name: 'Впервые в истории шоу',
+						date: '2 Авг',
+						views: '23 111'
+					},
+					{
+						image: '5',
+						duration: '02:36',
+						name: 'ТАНЦЫ. ФИНАЛ: Мигель VS. Денисова',
+						date: '30 Апр',
+						views: '9 506'
+					},
+					{
+						image: '6',
+						duration: '02:59',
+						name: 'Танцы: Айхан и Ляйсан Утяшева',
+						date: '30 Апр',
+						views: '408'
+					}
+				],
+				wrapperclass: 'c-series-list__wrapper',
+				blockclass: 'c-series-list-item__simple',
+				seeall: true
+			})
 			a.seasons-video-container__all-season(href="#") Смотреть все выпуски сезона 2
-
+		.seasons-video-container#tab-3
+			+c-series-list({
+				listitems: [
+					{
+						image: '3',
+						duration: '00:20',
+						name: 'Танцы: Виталий Уливанов (снзон 4, серия 21)',
+						date: '1 Янв',
+						views: '456'
+					},
+					{
+						image: '1',
+						duration: '00:20',
+						name: 'Впервые в истории шоу',
+						date: '24 Июня',
+						views: '456'
+					},
+					{
+						image: '2',
+						duration: '03:55',
+						name: 'Танцы: Саша Горошко (Leela James - Soul Food) (сезон 4, серия 22)',
+						date: '10 Авг',
+						views: '9 056'
+					},
+					{
+						image: '4',
+						duration: '04:50',
+						name: 'Впервые в истории шоу',
+						date: '2 Авг',
+						views: '23 111'
+					},
+					{
+						image: '5',
+						duration: '02:36',
+						name: 'ТАНЦЫ. ФИНАЛ: Мигель VS. Денисова',
+						date: '30 Апр',
+						views: '9 506'
+					},
+					{
+						image: '6',
+						duration: '02:59',
+						name: 'Танцы: Айхан и Ляйсан Утяшева',
+						date: '30 Апр',
+						views: '408'
+					}
+				],
+				wrapperclass: 'c-series-list__wrapper',
+				blockclass: 'c-series-list-item__simple',
+				seeall: true
+			})
+			a.seasons-video-container__all-season(href="#") Смотреть все выпуски сезона 3
+		.seasons-video-container#tab-4
+			+c-series-list({
+				listitems: [
+					{
+						image: '4',
+						duration: '04:50',
+						name: 'Впервые в истории шоу',
+						date: '2 Авг',
+						views: '23 111'
+					},
+					{
+						image: '1',
+						duration: '00:20',
+						name: 'Впервые в истории шоу',
+						date: '24 Июня',
+						views: '456'
+					},
+					{
+						image: '2',
+						duration: '03:55',
+						name: 'Танцы: Саша Горошко (Leela James - Soul Food) (сезон 4, серия 22)',
+						date: '10 Авг',
+						views: '9 056'
+					},
+					{
+						image: '3',
+						duration: '00:20',
+						name: 'Танцы: Виталий Уливанов (снзон 4, серия 21)',
+						date: '1 Янв',
+						views: '456'
+					},
+					{
+						image: '5',
+						duration: '02:36',
+						name: 'ТАНЦЫ. ФИНАЛ: Мигель VS. Денисова',
+						date: '30 Апр',
+						views: '9 506'
+					},
+					{
+						image: '6',
+						duration: '02:59',
+						name: 'Танцы: Айхан и Ляйсан Утяшева',
+						date: '30 Апр',
+						views: '408'
+					}
+				],
+				wrapperclass: 'c-series-list__wrapper',
+				blockclass: 'c-series-list-item__simple',
+				seeall: true
+			})
+			a.seasons-video-container__all-season(href="#") Смотреть все выпуски сезона 4
+		.seasons-video-container#tab-5
+			+c-series-list({
+				listitems: [
+					{
+						image: '5',
+						duration: '02:36',
+						name: 'ТАНЦЫ. ФИНАЛ: Мигель VS. Денисова',
+						date: '30 Апр',
+						views: '9 506'
+					},
+					{
+						image: '1',
+						duration: '00:20',
+						name: 'Впервые в истории шоу',
+						date: '24 Июня',
+						views: '456'
+					},
+					{
+						image: '2',
+						duration: '03:55',
+						name: 'Танцы: Саша Горошко (Leela James - Soul Food) (сезон 4, серия 22)',
+						date: '10 Авг',
+						views: '9 056'
+					},
+					{
+						image: '3',
+						duration: '00:20',
+						name: 'Танцы: Виталий Уливанов (снзон 4, серия 21)',
+						date: '1 Янв',
+						views: '456'
+					},
+					{
+						image: '4',
+						duration: '04:50',
+						name: 'Впервые в истории шоу',
+						date: '2 Авг',
+						views: '23 111'
+					},
+					{
+						image: '6',
+						duration: '02:59',
+						name: 'Танцы: Айхан и Ляйсан Утяшева',
+						date: '30 Апр',
+						views: '408'
+					}
+				],
+				wrapperclass: 'c-series-list__wrapper',
+				blockclass: 'c-series-list-item__simple',
+				seeall: true
+			})
+			a.seasons-video-container__all-season(href="#") Смотреть все выпуски сезона 5
+		.seasons-video-container#tab-6
+			+c-series-list({
+				listitems: [
+					{
+						image: '6',
+						duration: '02:59',
+						name: 'Танцы: Айхан и Ляйсан Утяшева',
+						date: '30 Апр',
+						views: '408'
+					},
+					{
+						image: '1',
+						duration: '00:20',
+						name: 'Впервые в истории шоу',
+						date: '24 Июня',
+						views: '456'
+					},
+					{
+						image: '2',
+						duration: '03:55',
+						name: 'Танцы: Саша Горошко (Leela James - Soul Food) (сезон 4, серия 22)',
+						date: '10 Авг',
+						views: '9 056'
+					},
+					{
+						image: '3',
+						duration: '00:20',
+						name: 'Танцы: Виталий Уливанов (снзон 4, серия 21)',
+						date: '1 Янв',
+						views: '456'
+					},
+					{
+						image: '4',
+						duration: '04:50',
+						name: 'Впервые в истории шоу',
+						date: '2 Авг',
+						views: '23 111'
+					},
+					{
+						image: '5',
+						duration: '02:36',
+						name: 'ТАНЦЫ. ФИНАЛ: Мигель VS. Денисова',
+						date: '30 Апр',
+						views: '9 506'
+					}
+				],
+				wrapperclass: 'c-series-list__wrapper',
+				blockclass: 'c-series-list-item__simple',
+				seeall: true
+			})
+			a.seasons-video-container__all-season(href="#") Смотреть все выпуски сезона 6
+		.seasons-video-container#tab-7
+			+c-series-list({
+				listitems: [
+					{
+						image: '1',
+						duration: '00:20',
+						name: 'Впервые в истории шоу',
+						date: '24 Июня',
+						views: '456'
+					},
+					{
+						image: '2',
+						duration: '03:55',
+						name: 'Танцы: Саша Горошко (Leela James - Soul Food) (сезон 4, серия 22)',
+						date: '10 Авг',
+						views: '9 056'
+					},
+					{
+						image: '3',
+						duration: '00:20',
+						name: 'Танцы: Виталий Уливанов (снзон 4, серия 21)',
+						date: '1 Янв',
+						views: '456'
+					},
+					{
+						image: '4',
+						duration: '04:50',
+						name: 'Впервые в истории шоу',
+						date: '2 Авг',
+						views: '23 111'
+					},
+					{
+						image: '5',
+						duration: '02:36',
+						name: 'ТАНЦЫ. ФИНАЛ: Мигель VS. Денисова',
+						date: '30 Апр',
+						views: '9 506'
+					},
+					{
+						image: '6',
+						duration: '02:59',
+						name: 'Танцы: Айхан и Ляйсан Утяшева',
+						date: '30 Апр',
+						views: '408'
+					}
+				],
+				wrapperclass: 'c-series-list__wrapper',
+				blockclass: 'c-series-list-item__simple',
+				seeall: true
+			})
+			a.seasons-video-container__all-season(href="#") Смотреть все выпуски сезона 7

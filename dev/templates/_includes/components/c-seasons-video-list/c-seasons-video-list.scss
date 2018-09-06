@@ -18,10 +18,6 @@
 				font-size: 14px;
 				color: rgba(22, 24, 29, 0.3);
 			}
-			// &.slick-current {
-			// 	transform: translateX(-50px)
-			// }
-
 			&.slick-current span:before {
 				content: "";
 				height: 2px;
@@ -35,13 +31,18 @@
 }
 
 .seasons-video-container {
+	display: none;
 	&__all-season {
 		margin-top: 24px;
 		font-size: 14px;
 		color: #9197A6;
 	}
+
+	.c-series-list__wrapper {
+		margin-bottom: 16px;
+	}
 }
 
-.slick-track {
-	// transform: translate(0) !important;
+.seasons-video-container.current {
+	display: block;
 }

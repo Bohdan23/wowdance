@@ -1,6 +1,7 @@
 extends _includes/_extends/main
 
 include _includes/components/c-seasons-video-list/c-seasons-video-list
+include _includes/components/c-seasons/c-seasons
 
 block head
 	+head({title: 'video'})
@@ -12,7 +13,7 @@ block content
 				img(src="s/images/tmp_file/player-img.png", alt="image")
 		.container
 			.c-news-today__wrapper
-				.c-series-block__wrapper
+				.c-series-block__wrapper.c-series-block__wrapper_video
 					.c-series-block__title
 						a.c-series-block__title-href(href="javascript:void(0)")
 							span.title-small Танцы: Мигель, хореографы и все учасницы сезона (Ленинград - Рыба) (сезон 4, серия 22)
@@ -28,6 +29,9 @@ block content
 								.c-series-block__info-item.views
 									+svg('icon-calendar')
 									span 24 Июня
+								.c-series-block__info-item.views.views_video
+									+svg('icon-views')
+									span 23 982
 							.c-series-block__info-item.tag
 								a.bordered(href="javascript:void(0)") Танцы (сезон 5)
 					p.player-video__descr Эфир: 22.08.2015. Танцы – это не просто увлечение, это целый мир, скрытый в ритме, музыке и пульсации чувств. А танцы на ТНТ это возможность для тех, кто не помышляет о жизни без любимого занятия, сделать его своим призванием. В поисках сильнейших танцоров России новый сезон «Танцев» заехал в Екатеринбург. Здесь жюри ждали как новые, так и уже бывалые участники, а также масса зажигательных, необычных, смешных и грустных танцев в исполнении шестнадцати претендентов на место в основной программе. В первом выпуске нового сезона – слезы разочарования и истерический хохот Мигеля, помолвка, а в концовке одна из самых экстравагантных пар за историю программы.
@@ -40,5 +44,25 @@ block content
 				
 				.c-list-block__wrapper.c-list-block__wrapper_video
 					+c-seasons-video-list()
+		.c-one-season__other-seasons
+			span.c-one-season__other-seasons-item Вам понравятся эти сезоны
+		.c-seasons__main-wrapper.c-one-season__seasons
+			.container
+				+c-seasons({
+					wrapperc: 'c-series-list__wrapper-seasons seasone-3-slider slider-init',
+					header: true,
+					title: '3 сезон',
+					slickcontrolmode: 'slick-control__wrapper_dark',
+					leftcontrol: 'control-seasone3-left',
+					rightcontrol: 'control-seasone3-right'
+				})
+				+c-seasons({
+					wrapperc: 'c-series-list__wrapper-seasons seasone-1-slider slider-init',
+					header: true,
+					title: '1 сезон',
+					slickcontrolmode: 'slick-control__wrapper_dark',
+					leftcontrol: 'control-seasone1-left',
+					rightcontrol: 'control-seasone1-right'
+				})
 		.banner__wrapper
 			img(src="s/images/tmp_file/banner.jpg", alt="banner")

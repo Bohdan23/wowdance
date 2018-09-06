@@ -47,8 +47,8 @@ Moff.amd.register({
 	},
 
 	beforeInclude: function() {},
-    afterInclude: function() {},
-    
+		afterInclude: function() {},
+		
 	loadOnScreen: ['xs', 'sm', 'md', 'lg'],
 	onWindowLoad: true
 });
@@ -65,8 +65,8 @@ if($('.c-series-list-item__info-name').length) {
 		},
 
 		beforeInclude: function() {},
-	    afterInclude: function() {},
-	    
+			afterInclude: function() {},
+			
 		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
 		onWindowLoad: true
 	});
@@ -84,8 +84,8 @@ if($('.c-footer__accordeon-text').length) {
 		},
 
 		beforeInclude: function() {},
-	    afterInclude: function() {},
-	    
+			afterInclude: function() {},
+			
 		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
 		onWindowLoad: true
 	});
@@ -102,8 +102,8 @@ if($('.slider-init').length) {
 		},
 
 		beforeInclude: function() {},
-	    afterInclude: function() {},
-	    
+			afterInclude: function() {},
+			
 		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
 		onWindowLoad: true
 	});
@@ -112,7 +112,17 @@ if($('.slider-init').length) {
 
 $('.player-video__descr-link').click(function() {
 	$('.player-video__descr').toggleClass('player-video__descr_active');
-	// $('.toggle-btn').toggleClass('active');
-	// $('.wrapper').toggleClass('wrapper--bg');
-	// $('header').toggleClass('menu-active');
 });
+
+
+$(document).ready(function(){
+	$('.seasons-list__item').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('.seasons-list__item').removeClass('current');
+		$('.seasons-video-container').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+})
