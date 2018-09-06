@@ -94,9 +94,9 @@ $(document).ready(function() {
 				breakpoint: 767,
 				settings: {
 					slidesToShow: 3,
-                	slidesToScroll: 1,
-                	vertical: true,
-                	verticalSwiping: true
+					slidesToScroll: 1,
+					vertical: true,
+					verticalSwiping: true
 				}
 			}
 		]
@@ -107,11 +107,11 @@ $(document).ready(function() {
 			if (!$('.popular-slider').hasClass('slick-initialized')) {
 				$('.popular-slider').slick(popularOptions);
 			}
-	    } else{
-	    	if ($('.popular-slider').hasClass('slick-initialized')) {
-	        	$('.popular-slider').slick('unslick');
-	    	}
-	    }
+		} else{
+			if ($('.popular-slider').hasClass('slick-initialized')) {
+				$('.popular-slider').slick('unslick');
+			}
+		}
 	}
 
 	function initSlickSeasons(elem, options) {
@@ -129,4 +129,12 @@ $(document).ready(function() {
 	$(window).resize(initSlick);
 
 	$('.c-one-season__select').selectpicker();
+
+
+
+	$('.seasons-list').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		arrows: false
+	});
 });

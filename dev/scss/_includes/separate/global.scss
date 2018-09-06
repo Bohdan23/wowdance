@@ -8,6 +8,43 @@
 	// border: 1px solid red;
 }
 
+.player-container {
+	.c-series-block__info {
+		padding-bottom: 15px;
+		margin-bottom: 20px;
+		border-bottom: 2px solid #EFF1F3;
+	}
+}
+
+.player {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.player-video {
+	background-color: #16181D;
+}
+
+.player-video__descr,
+.player-video__descr-link {
+	margin-bottom: 0;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+.player-breadcrambs {
+	margin-top: 16px;
+	margin-bottom: 40px;
+}
+
+.player-breadcrambs {
+	font-size: 1rem;
+    line-height: 1.35714rem;
+    color: #9197A6;
+}
+
 a {
 	text-decoration: none;
 }
