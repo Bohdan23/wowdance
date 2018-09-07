@@ -1,13 +1,16 @@
 .c-seasons-video-list {
 	border-radius: 8px;
-	padding: 24px 16px;
+	padding: 19px 16px;
 	background-color: #EFF1F3;
+	.c-series-list__wrapper {
+		max-width: 280px;
+	}
 	.seasons-list {
 		margin-bottom: 24px;
 		display: flex;
 		&__item {
 			width: auto;
-			padding-bottom: 16px;
+			padding-bottom: 14px;
 			border-bottom: 2px solid #fff;
 		    text-align: right;
 			&-title {
@@ -17,13 +20,14 @@
 				line-height: normal;
 				font-size: 14px;
 				color: rgba(22, 24, 29, 0.3);
+				@extend .cursor-p;
 			}
 			&.slick-current span:before {
 				content: "";
 				height: 2px;
 				width: 100%;
 				position: absolute;
-				bottom: -22px;
+				bottom: -20px;
 				background-color: #2064DB;
 			}
 		}

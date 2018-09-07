@@ -111,7 +111,7 @@ if($('.slider-init').length) {
 
 
 $('.player-video__descr-link').click(function() {
-	$('.player-video__descr').toggleClass('player-video__descr_active');
+	$('.player-video__descr').toggleClass('active');
 });
 
 
