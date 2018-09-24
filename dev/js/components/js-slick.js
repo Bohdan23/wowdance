@@ -2,28 +2,15 @@ $(document).ready(function() {
 	
 	var popularOptions = {
 			slidesToShow: 2,
-			centerMode: true,
+			centerMode: false,
+			infinite: false,
 			prevArrow: '.control-popular-left',
 			nextArrow: '.control-popular-right',
 			responsive: [
 				{
-					breakpoint: 530,
-					settings: {
-						slidesToShow: 2,
-						centerMode: false
-					}
-				},
-				{
 					breakpoint: 480,
 					settings: {
-						slidesToShow: 1,
-						centerMode: true
-					}
-				},
-				{
-					breakpoint: 370,
-					settings: {
-						slidesToShow: 1,
+						slidesToShow: 1.3,
 						centerMode: false
 					}
 				}
@@ -33,24 +20,25 @@ $(document).ready(function() {
 	var oneSeasonPopularOptions = {
 			slidesToShow: 4,
 			centerMode: false,
+			infinite: false,
 			prevArrow: '.control-one-season-popular-left',
 			nextArrow: '.control-one-season-popular-right',
 			responsive: [
 				{
-					breakpoint: 1023,
+					breakpoint: 1024,
 					settings: {
 						slidesToShow: 3
 					}
 				},
 				{
-					breakpoint: 767,
+					breakpoint: 768,
 					settings: {
 						slidesToShow: 2,
 						centerMode: true
 					}
 				},
 				{
-					breakpoint: 569,
+					breakpoint: 570,
 					settings: {
 						slidesToShow: 2,
 						centerMode: false
@@ -64,7 +52,7 @@ $(document).ready(function() {
 					}
 				},
 				{
-					breakpoint: 349,
+					breakpoint: 350,
 					settings: {
 						slidesToShow: 1,
 						centerMode: false
@@ -76,22 +64,23 @@ $(document).ready(function() {
 	var seasonsOptions = {
 		slidesToShow: 5,
 		prevArrow: '',
+		infinite: false,
 		nextArrow: '',
 		responsive: [
 			{
-				breakpoint: 1279,
+				breakpoint: 1280,
 				settings: {
 					slidesToShow: 4
 				}
 			},
 			{
-				breakpoint: 1023,
+				breakpoint: 1024,
 				settings: {
 					slidesToShow: 3
 				}
 			},
 			{
-				breakpoint: 767,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 1,

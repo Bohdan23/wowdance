@@ -54,6 +54,10 @@
 	&__wrapper {
 		padding: 64px 0 32px 0;
 		position: relative;
+		margin-top: 80px;
+		@include m(1023) {
+			margin-top: 0;
+		}
 		&:before, &:after {
 	    	content: '';
 	    	display: block;
@@ -164,6 +168,7 @@
 					border: 1px solid $light-grey;
 					background-color: transparent;
 					padding: 0 16px;
+					@extend .cursor-p;
 					&:hover {
 						background-color: transparent;
 						border-color: $main-grey;
@@ -195,7 +200,7 @@
 				}
 				.dropdown-item {
 					padding: 0 0 0 7px;
-					cursor: pointer;
+					@extend .cursor-p;
 					.text {
 						font-size: 1rem;
 						line-height: 1.3571rem;
@@ -240,4 +245,8 @@
 			font-weight: 600;
 		}
 	}
+}
+
+.btn:not(:disabled):not(.disabled) {
+	@extend .cursor-p;
 }

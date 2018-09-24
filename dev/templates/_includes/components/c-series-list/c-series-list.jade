@@ -2,7 +2,7 @@ mixin c-series-list(data)
 	div(class='' + data.wrapperclass ? data.wrapperclass : '')
 		each listitem in data.listitems
 			div(class='' + data.blockclass ? data.blockclass : '')
-				a.c-series-list-item__image(href="javascript:void(0)")
+				a.c-series-list-item__image.h-object-fit(href="javascript:void(0)")
 					img(src="s/images/tmp_file/series-list/#{listitem.image}.jpg", alt="image")
 					span.c-series-list-item__duration= listitem.duration
 					+svg('icon-play-control')

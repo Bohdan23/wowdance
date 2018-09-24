@@ -3,11 +3,12 @@
     padding: 0;
     position: relative;
     max-height: 100%;
-    transition: .8s ease-in-out;
+    height: auto;
+    transition: all .8s ease-in-out;
     &:before, &:after {
-    	content: '';
-    	display: block;
-    	position: absolute;
+        content: '';
+        display: block;
+        position: absolute;
     }
     &:before {
     	top: 0;
@@ -37,14 +38,9 @@
     }
     &__side {
     	&-wrapper {
-    		transition: .8s ease-in-out;
-    		max-height: 100%;
-    		// border: 1px solid red;
+    		transition: all .8s ease-in-out;
     		display: flex;
     		justify-content: space-between;
-    		&.full-height {
-	    		max-height: 100%;
-	    	}
 	    	@include m(1023) {
 				flex-wrap: wrap;
 	    	}
@@ -57,7 +53,6 @@
     	&-left {
     		min-height: inherit;
     		width: 340px;
-    		// background-color: rgba(0,0,0,.52);
     		position: relative;
     		padding-top: 62px;
     		@include m(1279) {
@@ -73,8 +68,6 @@
     		}
     	}
     	&-right {
-    		min-height: inherit;
-    		// background-color: rgba(0,0,0,.2);
     		width: calc(100% - 340px);
     		padding: 74px 0 64px 0;
     		margin-left: 56px;
@@ -148,11 +141,8 @@
     	}
     }
     &__accordeon-text {
-    	// border: 1px solid red;
     	position: relative;
-    	max-height: 378px;
-    	transition: .8s ease-in-out;
-    	overflow: hidden;
+    	transition: all .8s ease-in-out;
     	max-width: 635px;
     	&:after {
     		content: '';
@@ -178,7 +168,6 @@
     		max-width: 100%;
     	}
     	@include m(1023) {
-    		max-height: 325px;
     		max-width: 588px;
 		    width: 100%;
 		    margin: 0 auto;
@@ -207,7 +196,7 @@
     	font-size: 1rem;
     	line-height: 1.35714rem;
     	background-color: rgba(255,255,255,.15);
-    	transition: $transition_duration $transition_type;
+    	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     	text-decoration: none;
     	&:hover {
     		background-color: rgba(255,255,255,.25);
@@ -219,5 +208,15 @@
     	@include m(768) {
     		width: 235px;
     	}
+    }
+}
+
+.js-collapse-content {
+    display: none;
+}
+
+.js-collapse_opened {
+    .c-footer__accordeon-text:after {
+        background: transparent;
     }
 }
