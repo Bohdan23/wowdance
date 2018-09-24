@@ -111,6 +111,9 @@ if($('.slider-init').length) {
 
 
 $('.player-video__descr-link').click(function() {
+	$('.player-video__descr').toggleClass('player-video__descr_active');
+	$('.player-video__descr-link_max').toggleClass('player-video__descr-link_max-active');
+	$('.player-video__descr-link_min').toggleClass('player-video__descr-link_min-active');
 	$('.player-video__descr').toggleClass('active');
 });
 
