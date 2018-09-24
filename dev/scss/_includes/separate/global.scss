@@ -87,13 +87,14 @@
 
 .player-video__descr,
 .player-video__descr-link {
-	margin-bottom: 0;
+	// margin-bottom: 10px;
 	font-style: normal;
 	font-weight: normal;
 	line-height: 24px;
 	font-size: 14px;
 }
 
+.player-video__descr-link,
 .player-video__descr-link {
 	cursor: pointer;
 	color: #0056b3;
@@ -106,6 +107,18 @@
 }
 .player-video__descr_active {
 	max-height: none;
+}
+
+.player-video__descr-link_min {
+	display: none;
+}
+
+.player-video__descr-link_max-active {
+	display: none;
+}
+
+.player-video__descr-link_min-active {
+	display: block;
 }
 
 .player-breadcrambs {
