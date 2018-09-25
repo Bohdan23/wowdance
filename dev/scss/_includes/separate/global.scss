@@ -9,11 +9,17 @@
 	@include m(1023) {
 		margin-top: 0;
 	}
+
+	.c-series-block__info_pull-left {
+		
+	}
+	
 	.c-series-block__info-item.views {
 		margin-top: -13px;
 	}
 	.c-news-today__wrapper {
 		margin-bottom: 60px;
+		justify-content: center;
 	}
 
 	.c-series-block__wrapper {
@@ -78,11 +84,11 @@
 		}
 	}
 	@include mn(768) {
-	    max-width: 746px;
+	    // max-width: 746px;
 	    height: 270px;
 	    margin: 0 auto;
-	    padding-left: 15px;
-	    padding-right: 15px;
+	    padding-left: 20px;
+	    padding-right: 20px;
 	}
 	@include mn(1024) {
 	    max-width: 100%;
