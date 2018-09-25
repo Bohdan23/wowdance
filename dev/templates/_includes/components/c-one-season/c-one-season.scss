@@ -62,6 +62,10 @@
 	    	content: '';
 	    	display: block;
 	    	position: absolute;
+	    	z-index: -1;
+	    	@include m(767) {
+	    		display: none;
+	    	}
 	    }
 	    &:before {
 			top: -30px;
@@ -127,9 +131,9 @@
 			width: 100%;
 			margin-bottom: 26px;
 			@include m(1279) {
-				margin-bottom: 24px;
+				margin-bottom: 23px;
 			}
-			@include m(1279) {
+			@include m(1023) {
 				margin-bottom: 3px;
 			}
 		}
@@ -170,8 +174,10 @@
 					padding: 0 16px;
 					@extend .cursor-p;
 					&:hover {
-						background-color: transparent;
-						border-color: $main-grey;
+						@include mn(1023) {
+							background-color: transparent;
+							border-color: $main-grey;
+						}
 					}
 				}
 				.dropdown-toggle {
@@ -193,6 +199,7 @@
 				}
 				.dropdown-menu {
 					width: 100%;
+					border-radius: 10px;
 				}
 				ul.dropdown-menu {
 					border: none;
@@ -208,7 +215,7 @@
 						text-align: left;
 					}
 					&.active, &:active {
-						background-color: $main-grey;
+						background-color: transparent;
 					}
 				}
 				.filter-option-inner-inner {

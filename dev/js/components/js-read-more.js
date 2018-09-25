@@ -14,7 +14,9 @@ $(document).ready(function() {
                     .not(th_content)
                     .stop(true,true).slideUp('800');
                 th_content.stop(true,true).slideDown('800', function(){
-                    $('html,body').animate({scrollTop:th_collapse.offset().top - 5}, 800, 'swing');
+                    if ($(window).width() > 1006) {
+                        $('html,body').animate({scrollTop:th_collapse.offset().top - 5}, 800, 'swing');
+                    }
                 });
             } else {
             	$('.c-footer__read-more-btn').text('Читать полностью');
