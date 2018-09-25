@@ -10,12 +10,44 @@
 		margin-top: 0;
 	}
 
+	.c-series-list-item__simple + .c-series-list-item__simple {
+		margin-top: 16px;
+	}
+
+	.c-series-block__title-href {
+		.title-small {
+			@include m(767) {
+				margin-top: 16px;
+				line-height: 1.5em;
+			}
+		}
+		@include m(767) {
+			margin-top: 16px;
+		}
+	}
+
 	.c-series-block__info_pull-left {
-		
+		flex-wrap: wrap;
+		.views {
+			@include m(380) {
+				margin-left: 15px;
+			}
+		}
+	}
+
+
+	.slick-list {
+		padding-left: 10px;
 	}
 	
 	.c-series-block__info-item.views {
 		margin-top: -13px;
+		@include m(1279) {
+			margin-top: -45px;
+		}
+		@include m(1023) {
+			margin-top: -13px;
+		}
 	}
 	.c-news-today__wrapper {
 		margin-bottom: 60px;
