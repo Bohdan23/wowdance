@@ -29,6 +29,9 @@
             a {
                 margin-top: -12px;
             }
+            .icon-logo {
+                font-size: 150px;
+            }
         }
         @include m(767) {
             flex-wrap: wrap;
@@ -37,8 +40,9 @@
                 width: 100%;
                 justify-content: center;
                 margin: 12px 0 17px 0;
-                img {
-                    max-width: 135px;
+                .icon-logo {
+                    font-size: 128px;
+                    height: 40px;
                 }
             }
         }

@@ -43,6 +43,10 @@
 		.slick-control {
 			&-left {
 				margin-right: 12px;
+				padding-left: 2px;
+			}
+			&-right {
+				padding-left: 1px;
 			}
 		}
 		@include m(767) {
