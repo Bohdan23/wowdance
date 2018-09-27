@@ -117,8 +117,8 @@ $(document).ready(function() {
 	initSlickSeasons('.one-season-popular-slider', oneSeasonPopularOptions, seasonsOptions.prevArrow = '.control-seasone1-left', seasonsOptions.nextArrow = '.control-seasone1-right');
 	$(window).resize(initSlick);
 
-
-	$('.seasons-list').slick({
+	var myScrollSlider = $('.seasons-list');
+	myScrollSlider.slick({
 		slidesToShow: 4.3,
 		infinite: true,
 		centerMode: false,
@@ -127,4 +127,15 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		arrows: false
 	});
+
+	myScrollSlider.on('wheel', (function(e) {
+	e.preventDefault();
+
+	if (e.originalEvent.deltaY < 0) {
+		$(this).slick('slickNext');
+	} else {
+		$(this).slick('slickPrev');
+	}
+	}));
+
 });
