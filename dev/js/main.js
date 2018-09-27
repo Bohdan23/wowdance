@@ -13,7 +13,6 @@
 //=include ../../dist/bower_components/bootstrap/js/dist/util.js
 //=include ../../dist/bower_components/popper.js/dist/umd/popper.js
 //=include ../../dist/bower_components/bootstrap/js/dist/dropdown.js
-//=include ../../dist/bower_components/bootstrap-select/dist/js/bootstrap-select.js
 
 /* components */
 // components/js-header.js

@@ -37,19 +37,51 @@
 }
 .banner__wrapper {
 	width: 100%;
+	max-width: 1280px;
 	height: 130px;
 	margin: 44px auto 0 auto;
+	text-align: center;
+	display: flex;
+	align-items: flex-bottom;
+	justify-content: center;
 	@include m(1279) {
+		max-width: 1024px;
 		margin: 31px auto 0 auto;
 	}
 	@include m(1023) {
 		margin: 40px auto 0 auto;
 	}
-	@include m(768) {
+	@include m(767) {
 		margin: 33px auto 0 auto;
 	}
-	@include m(480) {
-		width: 232px;
-		height: 130px;
+	.banner-large {
+		display: block;
+		@include m(1279) {
+			display: none;
+		}
+	}
+	.banner-1024 {
+		display: none;
+		@include m(1279) {
+			display: block;
+		}
+		@include m(1023) {
+			display: none;
+		}
+	}
+	.banner-768 {
+		display: none;
+		@include m(1023) {
+			display: block;
+		}
+		@include m(767) {
+			display: none;
+		}
+	}
+	.banner-232 {
+		display: none;
+		@include m(767) {
+			display: block;
+		}
 	}
 }

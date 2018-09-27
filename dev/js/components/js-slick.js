@@ -41,7 +41,7 @@ $(document).ready(function() {
 					breakpoint: 570,
 					settings: {
 						slidesToShow: 2,
-						centerMode: false
+						centerMode: true
 					}
 				},
 				{
@@ -83,7 +83,7 @@ $(document).ready(function() {
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 3,
-					slidesToScroll: 1,
+					slidesToScroll: 3,
 					vertical: true,
 					verticalSwiping: true
 				}
@@ -116,9 +116,6 @@ $(document).ready(function() {
 	initSlickSeasons('.seasone-1-slider', seasonsOptions, seasonsOptions.prevArrow = '.control-seasone1-left', seasonsOptions.nextArrow = '.control-seasone1-right');
 	initSlickSeasons('.one-season-popular-slider', oneSeasonPopularOptions, seasonsOptions.prevArrow = '.control-seasone1-left', seasonsOptions.nextArrow = '.control-seasone1-right');
 	$(window).resize(initSlick);
-
-	$('.c-one-season__select').selectpicker();
-
 
 
 	$('.seasons-list').slick({

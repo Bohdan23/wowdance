@@ -54,7 +54,6 @@
 		display: inline-block;
 		margin: 25px 0 13px 0;
 		transition: $transition_duration $transition_type;
-		letter-spacing: 0.1px;
 		&:hover {
 			.title-small {
 				color: $main-blue;
@@ -98,13 +97,13 @@
 		.icon-views {
 			color: $main-grey;	
 			margin-right: 9px;
+			font-size: 1.6rem;
 		}
 		&-advice {
 			color: $main-color;
 			font-size: 1rem;
 			line-height: 1.35714rem;
 			opacity: 0.6;
-			letter-spacing: 0.4px;
 		}
 	}
 }
