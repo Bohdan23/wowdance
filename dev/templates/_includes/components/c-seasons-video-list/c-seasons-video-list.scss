@@ -12,7 +12,7 @@
 			width: auto;
 			padding-bottom: 14px;
 			border-bottom: 2px solid #fff;
-		    text-align: right;
+			text-align: right;
 			&-title {
 				position: relative;
 				font-style: normal;
@@ -21,13 +21,20 @@
 				font-size: 14px;
 				color: rgba(22, 24, 29, 0.3);
 				@extend .cursor-p;
+				transition: color .3s;
+				&:hover {
+					color: rgba(22, 24, 29, 0.5);
+				}
+			}
+			&.slick-current span {
+				color: #16181D;
 			}
 			&.slick-current span:before {
 				content: "";
 				height: 2px;
 				width: 100%;
 				position: absolute;
-				bottom: -20px;
+				bottom: -21px;
 				background-color: #2064DB;
 			}
 		}

@@ -118,10 +118,10 @@ $(document).ready(function() {
 	$(window).resize(initSlick);
 
 	$('.c-one-season__select').selectpicker();
+	
 
-
-
-	$('.seasons-list').slick({
+	var myScrollSlider = $('.seasons-list');
+	myScrollSlider.slick({
 		slidesToShow: 4.3,
 		infinite: true,
 		centerMode: false,
@@ -130,4 +130,15 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		arrows: false
 	});
+
+	myScrollSlider.on('wheel', (function(e) {
+	e.preventDefault();
+
+	if (e.originalEvent.deltaY < 0) {
+		$(this).slick('slickNext');
+	} else {
+		$(this).slick('slickPrev');
+	}
+	}));
+
 });
