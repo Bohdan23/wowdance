@@ -118,10 +118,11 @@ $(document).ready(function() {
 	$(window).resize(initSlick);
 
 	$('.c-one-season__select').selectpicker();
-	
+
+
 
 	var myScrollSlider = $('.seasons-list');
-	myScrollSlider.slick({
+	var options = {
 		slidesToShow: 4.3,
 		infinite: true,
 		centerMode: false,
@@ -129,16 +130,28 @@ $(document).ready(function() {
 		focusOnSelect: true,
 		slidesToScroll: 1,
 		arrows: false
-	});
+	};
+	function slickControl() {
+		var gW = $(window).outerWidth();
+		if (gW >= 1025 && !myScrollSlider.hasClass('is-active')) {
+			myScrollSlider.addClass('is-active').slick(options);
+			myScrollSlider.on('wheel', (function(e) {
+				e.preventDefault();
 
-	myScrollSlider.on('wheel', (function(e) {
-	e.preventDefault();
-
-	if (e.originalEvent.deltaY < 0) {
-		$(this).slick('slickNext');
-	} else {
-		$(this).slick('slickPrev');
+				if (e.originalEvent.deltaY < 0) {
+					$(this).slick('slickNext');
+				} else {
+					$(this).slick('slickPrev');
+				}
+			}));
+		} else if (gW < 1025){
+			myScrollSlider.removeClass('is-active').slick('unslick');			
+		}
 	}
-	}));
-
+	$(window).on('resize', function() {
+		slickControl();
+	});
+	setTimeout(function() {
+		slickControl();
+	})
 });
