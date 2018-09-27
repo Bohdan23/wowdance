@@ -22,10 +22,10 @@
 		}
 		@include m(767) {
 			margin-bottom: 22px;
-			padding-bottom: 59px;
+			padding-bottom: 53px;
 		    width: 100%;
 			max-width: 600px;
-			margin: 0 auto;
+			margin: 0 auto 23px auto;
 		}
 	}
 	&__header {
@@ -53,6 +53,7 @@
 			position: absolute;
 			bottom: 0;
 			left: 50%;
+			width: 100%;
 			transform: translate(-50%,0);
 			.slick-control {
 				&-left {
@@ -73,15 +74,17 @@
 		color: $main-color;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		padding: 0 18px;
 		height: 44px;
-		border-radius: 22px;
+		border-radius: 27px;
 		margin-left: 12px;
 		&:hover {
 			color: $main-color;
 		}
 		@include m(767) {
-			width: 184px;
+			// width: 184px;
+			width: calc(100% - 104px);
 			order: 1;
 			margin: 0 8px 0 0;
 		}

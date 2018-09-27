@@ -27,12 +27,12 @@
 			}
 		}
 		.banner__wrapper {
-			margin: 74px 0 0 0;
+			margin: 74px auto 0 auto;
 			@include m(1279) {
-				margin: 51px 0 0 0;
+				margin: 51px auto 0 auto;
 			}
 			@include m(1023) {
-				margin: 92px 0 0 0;
+				margin: 92px auto 0 auto;
 			}
 		}
 		.slick-control__wrapper {
@@ -152,82 +152,47 @@
 			display: flex;
 			align-items: flex-start;
 			justify-content: flex-end;
-			select.c-one-season__select {
-				opacity: 0;
-				visibility: hidden;
-				position: absolute;
-				left: -9999em;
-			}
 			.c-one-season__select {
-				width: 179px !important;
-				z-index: 10;
-				@include m(767) {
-					width: 100% !important;
-					max-width: 480px;
-				}
-				.btn {
-					width: 100%;
-					height: 44px;
-					border-radius: 22px;
-					border: 1px solid $light-grey;
-					background-color: transparent;
-					padding: 0 16px;
-					@extend .cursor-p;
-					&:hover {
-						@include mn(1023) {
-							background-color: transparent;
-							border-color: $main-grey;
-						}
-					}
-				}
-				.dropdown-toggle {
-					position: relative;
-					&::after {
+				font-size: 1rem;
+			    line-height: 1.3571rem;
+			    color: #16181D;
+			    text-align: left;
+			    width: 100%;
+			    height: 44px;
+			    border-radius: 22px;
+			    border: 1px solid rgba(203, 207, 216, 0.5);
+			    background-color: transparent;
+			    padding: 0 16px;
+			    display: inline;
+			    position: relative;
+			    -webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			    &-wrapper {
+			    	display:inline-block;
+			    	min-width: 179px;
+			    	position: relative;
+			    	@include m(767) {
+			    		width: 100%;
+			    	}
+				    &:after {
 						display: block;
 						border: none;
 						content: '';
-					    width: 14px;
-					    height: 9px;
-					    background-image: url('../../s/images/useful/svg/ic-arrow.svg');
-					    background-size: contain;
-					    background-repeat: no-repeat;
-					    position: absolute;
-						right: 20px;
+						width: 23px;
+						height: 20px;
+						background-image: url(../../s/images/useful/svg/ic-arrow.svg);
+						background-size: 13px;
+						background-repeat: no-repeat;
+						background-position: left center;
+						background-color: #fff;
+						position: absolute;
+						right: 6px;
 						top: 54%;
-						margin-top: -6px;
-					}
-				}
-				.dropdown-menu {
-					width: 100%;
-					border-radius: 10px;
-				}
-				ul.dropdown-menu {
-					border: none;
-					padding-top: 0;
-				}
-				.dropdown-item {
-					padding: 0 0 0 7px;
-					@extend .cursor-p;
-					.text {
-						font-size: 1rem;
-						line-height: 1.3571rem;
-						color: $main-color;
-						text-align: left;
-					}
-					&.active, &:active {
-						background-color: transparent;
-					}
-				}
-				.filter-option-inner-inner {
-					font-size: 1rem;
-					line-height: 1.3571rem;
-					color: $main-color;
-					text-align: left;
-					letter-spacing: 0.3px;
-				}
-			}
-			.dropdown-menu {
-				top: 0;
+						z-index: -1;
+						margin-top: -10px;
+				    }
+			    }
 			}
 			@include m(1279) {
 				width: 35%;
