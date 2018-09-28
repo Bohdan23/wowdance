@@ -6,6 +6,8 @@ $(document).ready(function() {
 			infinite: false,
 			prevArrow: '.control-popular-left',
 			nextArrow: '.control-popular-right',
+			speed: 600,
+			cssEase: 'ease-in-out',
 			responsive: [
 				{
 					breakpoint: 480,
@@ -23,6 +25,8 @@ $(document).ready(function() {
 			infinite: false,
 			prevArrow: '.control-one-season-popular-left',
 			nextArrow: '.control-one-season-popular-right',
+			speed: 600,
+			cssEase: 'ease-in-out',
 			responsive: [
 				{
 					breakpoint: 1024,
@@ -66,6 +70,8 @@ $(document).ready(function() {
 		prevArrow: '',
 		infinite: false,
 		nextArrow: '',
+		speed: 600,
+		cssEase: 'ease-in-out',
 		responsive: [
 			{
 				breakpoint: 1280,
@@ -85,7 +91,7 @@ $(document).ready(function() {
 					slidesToShow: 3,
 					slidesToScroll: 3,
 					vertical: true,
-					verticalSwiping: true
+					verticalSwiping: false
 				}
 			}
 		]
