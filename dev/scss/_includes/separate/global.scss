@@ -108,7 +108,7 @@
 	margin: 0 auto;
 	text-align: center;
 	height: 180px;
-    width: 100%;
+	width: 100%;
 	.player-video {
 		height: inherit;
 		img {
@@ -116,14 +116,16 @@
 		}
 	}
 	@include mn(768) {
-	    height: 270px;
-	    margin: 0 auto;
+		height: 270px;
+		margin: 0 auto;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	@include mn(1024) {
-	    max-width: 100%;
-	    height: 410px;
-	    padding-left: 0;
-	    padding-right: 0;
+		max-width: 100%;
+		height: 410px;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
@@ -163,11 +165,11 @@
 	@extend .cursor-p;
 	color: $main-blue;
 	display: block;
-    margin: 3px 0 25px;
-    transition: color .3s ease-in-out;
-    &:hover {
-    	color: rgba(32, 100, 219, .7);
-    }
+	margin: 3px 0 25px;
+	transition: color .3s ease-in-out;
+	&:hover {
+		color: rgba(32, 100, 219, .7);
+	}
 }
 
 
@@ -200,15 +202,15 @@
 
 .player-breadcrambs {
 	font-size: 1rem;
-    line-height: 1.35714rem;
-    color: $main-grey;
-    &-item {
-    	color: $main-grey;
-    	transition: color .3s ease-in-out;
-    	&:hover {
-    		color: $dark-grey;
-    	}
-    }
+	line-height: 1.35714rem;
+	color: $main-grey;
+	&-item {
+		color: $main-grey;
+		transition: color .3s ease-in-out;
+		&:hover {
+			color: $dark-grey;
+		}
+	}
 }
 
 .c-list-block__wrapper_video {
@@ -273,14 +275,14 @@ a {
 		@include m(1023) {
 			font-size: 1.6rem;
 			display: flex;
-    		justify-content: center;
-    		&.white-c {
+			justify-content: center;
+			&.white-c {
 				&:before {
 					position: relative;
 					left: auto;
 					top: auto;
 				}
-    		}
+			}
 		}
 	}
 	&-small {

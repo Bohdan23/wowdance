@@ -1,24 +1,40 @@
 .c-seasons-video-list {
+	position: relative;
 	border-radius: 8px;
 	padding: 19px 16px;
 	background-color: #EFF1F3;
+	overflow: hidden;
+	&:before {
+		content: "";
+		height: 2px;
+		width: 288px;
+		position: absolute;
+		top: 58px;
+		background-color: #fff;
+		z-index: 1;
+	}
 	.c-series-list__wrapper {
 		max-width: 280px;
 	}
 	.seasons-list {
 		margin-bottom: 24px;
 		display: flex;
+		width: 288px;
+		// border-bottom: 2px solid #fff;
+		overflow-x: hidden;
+		// overflow-y: visible;
 		&__item {
-			width: auto;
-			padding-bottom: 14px;
-			border-bottom: 2px solid #fff;
+			flex-shrink: 0;
+			height: 43px;
 			text-align: right;
+			margin-right: 14px;
 			&-title {
 				position: relative;
 				font-style: normal;
 				font-weight: 600;
 				line-height: normal;
 				font-size: 14px;
+				height: 43px;
 				color: rgba(22, 24, 29, 0.3);
 				@extend .cursor-p;
 				transition: color .3s;
@@ -26,16 +42,20 @@
 					color: rgba(22, 24, 29, 0.5);
 				}
 			}
-			&.slick-current span {
+			&.current {
+				position: relative;
+			}
+			&.current span {
 				color: #16181D;
 			}
-			&.slick-current span:before {
+			&.current:before {
 				content: "";
 				height: 2px;
 				width: 100%;
 				position: absolute;
-				bottom: -21px;
+				bottom: 2px;
 				background-color: #2064DB;
+				z-index: 2;
 			}
 		}
 	}
