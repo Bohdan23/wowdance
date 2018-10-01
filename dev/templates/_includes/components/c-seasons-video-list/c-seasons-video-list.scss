@@ -7,9 +7,6 @@
 	.c-series-list__wrapper {
 		max-width: 280px;
 	}
-	// .mCSB_1_container {
-	// 	display: flex;
-	// }
 	.seasons-list {
 		margin-bottom: 24px;
 		width: 288px;
@@ -40,9 +37,11 @@
 					color: rgba(22, 24, 29, 0.5);
 				}
 			}
+			
 			&.current span {
 				color: #16181D;
 			}
+
 			&:before {
 				content: "";
 				height: 2px;
@@ -53,6 +52,7 @@
 				z-index: 1;
 				bottom: 1px;
 			}
+
 			&.current span:after {
 				content: "";
 				left: 0;
