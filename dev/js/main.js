@@ -128,3 +128,23 @@ $(document).ready(function(){
 		$("#"+tab_id).addClass('current');
 	})
 })
+
+
+if($('.scroll-init').length) {
+	Moff.amd.register({
+		id: 'scroll',
+		depend: {
+			js: ['bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js'],
+			css: ['bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css']
+		},
+		file: {
+			js: ['s/js/components/js-scroll.js']
+		},
+
+		beforeInclude: function() {},
+			afterInclude: function() {},
+			
+		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
+		onWindowLoad: true
+	});
+}

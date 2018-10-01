@@ -124,57 +124,54 @@ $(document).ready(function() {
 	$(window).resize(initSlick);
 
 
-	// var myScrollSlider = $('.seasons-list');
-	// var options = {
-	// 	slidesToShow: 4.3,
-	// 	// slidesToShow: 5,
-	// 	infinite: true,
-	// 	// infinite: false,
-	// 	centerMode: false,
-	// 	// centerMode: true,
-	// 	initialSlide: '1',
-	// 	focusOnSelect: true,
-	// 	slidesToScroll: 1,
-	// 	arrows: false
-	// };
-	// function slickControl() {
-	// 	var gW = $(window).outerWidth();
-	// 	if (gW >= 1025 && !myScrollSlider.hasClass('is-active')) {
-	// 		myScrollSlider.addClass('is-active').slick(options);
-	// 		myScrollSlider.on('wheel', (function(e) {
-	// 			e.preventDefault();
+	var myScrollSlider = $('.seasons-list');
+	var options = {
+		slidesToShow: 4.3,
+		infinite: false,
+		swipeToSlide: true,
+		slidesToScroll: 2,
+		arrows: false
+	};
+	function slickControl() {
+		var gW = $(window).outerWidth();
+		if (gW >= 1025 && !myScrollSlider.hasClass('is-active')) {
+			myScrollSlider.addClass('is-active').slick(options);
+			myScrollSlider.on('wheel', (function(e) {
+				e.preventDefault();
 
-	// 			if (e.originalEvent.deltaY < 0) {
-	// 				$(this).slick('slickPrev');
-	// 			} else {
-	// 				$(this).slick('slickNext');
-	// 			}
-	// 		}));
-	// 	} else if (gW < 1025){
-	// 		myScrollSlider.removeClass('is-active').slick('unslick');			
+				if (e.originalEvent.deltaY < 0) {
+					$(this).slick('slickPrev');
+				} else {
+					$(this).slick('slickNext');
+				}
+			}));
+		} else if (gW < 1025){
+			myScrollSlider.removeClass('is-active').slick('unslick');			
+		}
+	}
+	$(window).on('resize', function() {
+		slickControl();
+	});
+	setTimeout(function() {
+		slickControl();
+	})
+
+
+	// (function() {
+	// 	function scrollHorizontally(e) {
+	// 		e = window.event || e;
+	// 		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+	// 		document.getElementById('seasons-list').scrollLeft -= (delta*30); //
+	// 		e.preventDefault();
 	// 	}
-	// }
-	// $(window).on('resize', function() {
-	// 	slickControl();
-	// });
-	// setTimeout(function() {
-	// 	slickControl();
-	// })
-	(function() {
-		function scrollHorizontally(e) {
-			e = window.event || e;
-			var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-			document.getElementById('seasons-list').scrollLeft -= (delta*30); //
-			e.preventDefault();
-		}
-		if (document.getElementById('seasons-list').addEventListener) {
-		// IE9, Chrome, Safari, Opera
-			document.getElementById('seasons-list').addEventListener("mousewheel", scrollHorizontally, false);
-		// Firefox
-			document.getElementById('seasons-list').addEventListener("DOMMouseScroll", scrollHorizontally, false);
-		} else {
-		// IE 6/7/8
-			document.getElementById('seasons-list').attachEvent("onmousewheel", scrollHorizontally);
-		}
-	})();
+	// 	if (document.getElementById('seasons-list').addEventListener) {
+	// 	// IE9, Chrome, Safari, Opera
+	// 		document.getElementById('seasons-list').addEventListener("mousewheel", scrollHorizontally, false);
+	// 	// Firefox
+	// 		document.getElementById('seasons-list').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+	// 	} else {
+	// 	// IE 6/7/8
+	// 		document.getElementById('seasons-list').attachEvent("onmousewheel", scrollHorizontally);
+	// 	}
+	// })();
 });
