@@ -31,8 +31,11 @@
 			flex-shrink: 0;
 			height: 43px;
 			text-align: right;
-			margin-right: 16px;
+			// margin-right: 16px;
 			position: relative;
+			& + .seasons-list__item {
+				margin-left: 16px;
+			}
 			&-title {
 				white-space: nowrap;
 				font-style: normal;
