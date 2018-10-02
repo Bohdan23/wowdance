@@ -18,10 +18,8 @@
 		max-width: 280px;
 	}
 	.seasons-list {
-		// position: relative;
 		z-index: 1;
 		margin-bottom: 24px;
-		// border-bottom: 2px solid #fff;
 		overflow:scroll;
 		overflow-x: hidden;
 		overflow-y: hidden;
@@ -31,10 +29,9 @@
 			flex-shrink: 0;
 			height: 43px;
 			text-align: right;
-			// margin-right: 16px;
 			position: relative;
 			& + .seasons-list__item {
-				margin-left: 16px;
+				margin-left: 6px;
 			}
 			&-title {
 				white-space: nowrap;
