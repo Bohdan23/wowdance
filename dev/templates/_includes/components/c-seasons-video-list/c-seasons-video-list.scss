@@ -22,6 +22,7 @@
 		z-index: 1;
 		margin-bottom: 24px;
 		// border-bottom: 2px solid #fff;
+		overflow:scroll;
 		overflow-x: hidden;
 		overflow-y: hidden;
 		display: flex;
@@ -89,4 +90,13 @@
 
 .seasons-video-container__all-season:hover {
 	color: #2064DB;
+}
+
+.mCS-custom-scroll {
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+		height: 0;
+	}
+} 
+.mCSB_horizontal.mCSB_inside > .mCSB_container {
+	margin-bottom: 0!important;
 }
