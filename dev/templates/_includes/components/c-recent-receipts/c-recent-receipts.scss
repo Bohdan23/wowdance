@@ -18,9 +18,26 @@
             }
         }
     }
+    &-title-wrapper {
+        @media (max-width: $sw-sm-max) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        @media (max-width: $sw-xs-max) {
+            flex-wrap: wrap;
+        }
+        .c-one-season__select {
+            @media (max-width: $sw-xs-max) {
+                max-width: 400px;
+            }
+        }
+    }
     &-filters {
-        border: 1px solid blue;
         margin: 24px 0 30px 0;
+        @media (max-width: $sw-sm-max) {
+            display: none;
+        }
         .filter-item {
             font-weight: 600;
             line-height: normal;

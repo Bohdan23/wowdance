@@ -3,22 +3,39 @@ include ../c-series-list/c-series-list
 mixin c-recent-receipts(data)
 	.recent-wrapper
 		.container
-			h3.title-middle Последние поступления
-			.recent-filters
-				a.filter-item.active(href="javascript:void(0)") Все
-				a.filter-item(href="javascript:void(0)") Юмор
-				a.filter-item(href="javascript:void(0)") Мистика
-				a.filter-item(href="javascript:void(0)") Реалити
-				a.filter-item(href="javascript:void(0)") Развлекательные
-				a.filter-item(href="javascript:void(0)") Шоу талантов
-				a.filter-item(href="javascript:void(0)") Красота
-				a.filter-item(href="javascript:void(0)") Кулинарные
-				a.filter-item(href="javascript:void(0)") Новости
-				a.filter-item(href="javascript:void(0)") Познавательные
-				a.filter-item(href="javascript:void(0)") Расследования
-				a.filter-item(href="javascript:void(0)") Ремонт
-				a.filter-item(href="javascript:void(0)") Ток-шоу
-				a.filter-item(href="javascript:void(0)") Авто/техника
+			.recent-title-wrapper
+				h3.title-middle Последние поступления
+				.recent-filters
+					a.filter-item.active(href="javascript:void(0)") Все
+					a.filter-item(href="javascript:void(0)") Юмор
+					a.filter-item(href="javascript:void(0)") Мистика
+					a.filter-item(href="javascript:void(0)") Реалити
+					a.filter-item(href="javascript:void(0)") Развлекательные
+					a.filter-item(href="javascript:void(0)") Шоу талантов
+					a.filter-item(href="javascript:void(0)") Красота
+					a.filter-item(href="javascript:void(0)") Кулинарные
+					a.filter-item(href="javascript:void(0)") Новости
+					a.filter-item(href="javascript:void(0)") Познавательные
+					a.filter-item(href="javascript:void(0)") Расследования
+					a.filter-item(href="javascript:void(0)") Ремонт
+					a.filter-item(href="javascript:void(0)") Ток-шоу
+					a.filter-item(href="javascript:void(0)") Авто/техника
+				.c-one-season__select-wrapper
+					select.c-one-season__select(name="order")
+						option(value="1") Все
+						option(value="2") Юмор
+						option(value="3") Мистика
+						option(value="4") Реалити
+						option(value="5") Развлекательные
+						option(value="6") Шоу талантов
+						option(value="7") Красота
+						option(value="8") Кулинарные
+						option(value="9") Новости
+						option(value="10") Познавательные
+						option(value="11") Расследования
+						option(value="12") Ремонт
+						option(value="13") Ток-шоу
+						option(value="14") Авто/техника
 			+c-series-list({
 				wrapperclass: 'c-series-list__wrapper-seasons',
 				blockclass: 'c-series-list-item__season',
