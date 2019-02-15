@@ -1,0 +1,83 @@
+include ../c-series-list/c-series-list
+
+mixin c-watching-now(data)
+	.wn-wrapper
+		.container
+			.title-wrapper.wn-title
+				h2.title-middle.white-c Сейчас смотрят
+				if data.oneseasonecontrols
+					.c-seasons__header
+						.c-seasons__buttons-wrapper
+							.slick-control__wrapper
+								.slick-control-left.wn-control-left
+									+svg('icon-slick-control')
+								.slick-control-right.wn-control-right
+									+svg('icon-slick-control') 
+			+c-series-list({
+				wrapperclass: 'wn-slider slider-init',
+				blockclass: 'c-series-list-item__popular',
+				category: 'Танцы',
+				comments: true,
+				listitems: [
+					{
+						image: '7',
+						duration: '00:20',
+						name: 'Впервые в истории шоу',
+						date: '24.07.19',
+						views: '456',
+						description: true,
+						descriptiontext: 'Самый главный, самый последний главный',
+						comments: '56'
+					},
+					{
+						image: '8',
+						duration: '03:55',
+						name: 'Впервые в истории шоу вы такого не видели',
+						date: '24.07.19',
+						views: '9 056',
+						description: true,
+						descriptiontext: 'За пару шагов до финала учасника танцор Сергей',
+						comments: '56'
+					},
+					{
+						image: '9',
+						duration: '00:20',
+						name: 'Впервые в истории шоу вы такого не видели',
+						date: '24.07.19',
+						views: '456',
+						description: true,
+						descriptiontext: 'За пару шагов до финала учасника танцор Сергей',
+						comments: '56'
+					},
+					{
+						image: '10',
+						duration: '04:50',
+						name: 'Впервые в истории шоу вы такого не видели',
+						date: '24.07.19',
+						views: '23 111',
+						description: true,
+						descriptiontext: 'За пару шагов до финала учасника танцор Сергей',
+						comments: '56'
+					},
+					{
+						image: '8',
+						duration: '03:55',
+						name: 'Впервые в истории шоу вы такого не видели',
+						date: '24.07.19',
+						views: '9 056',
+						description: true,
+						descriptiontext: 'За пару шагов до финала учасника танцор Сергей',
+						comments: '56'
+					},
+					{
+						image: '9',
+						duration: '00:20',
+						name: 'Впервые в истории шоу вы такого не видели',
+						date: '24.07.19',
+						views: '456',
+						description: true,
+						descriptiontext: 'За пару шагов до финала учасника танцор Сергей',
+						comments: '56'
+					}
+				]
+			})

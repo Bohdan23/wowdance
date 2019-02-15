@@ -7,6 +7,12 @@ include _includes/components/c-popular/c-popular
 block head
 	+head({title: 'Season'})
 
+block header
+	+header({
+		header_first: true,
+		header_second: false
+	})
+
 block content
 	+c-one-season()
 	.c-one-season__other-seasons

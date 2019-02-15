@@ -37,10 +37,6 @@ window.moffConfig = {
 
 Moff.amd.register({
 	id: 'header',
-	// depend: {
-	// 	js: ['http://chat-domain.com/js/chat-api.js'],
-	// 	css: ['http://chat-domain.com/css/chat.css']
-	// },
 	file: {
 		js: ['s/js/components/js-header.js']
 	},
@@ -55,10 +51,6 @@ Moff.amd.register({
 if($('.c-series-list-item__info-name').length) {
 	Moff.amd.register({
 		id: 'texttrim',
-		// depend: {
-		// 	js: ['http://chat-domain.com/js/chat-api.js'],
-		// 	css: ['http://chat-domain.com/css/chat.css']
-		// },
 		file: {
 			js: ['s/js/components/js-texttrim.js']
 		},
@@ -74,10 +66,6 @@ if($('.c-series-list-item__info-name').length) {
 if($('.c-footer__accordeon-text').length) {
 	Moff.amd.register({
 		id: 'readMore',
-		// depend: {
-		// 	js: ['http://chat-domain.com/js/chat-api.js'],
-		// 	css: ['http://chat-domain.com/css/chat.css']
-		// },
 		file: {
 			js: ['s/js/components/js-read-more.js']
 		},
@@ -94,7 +82,8 @@ if($('.slider-init').length) {
 	Moff.amd.register({
 		id: 'slick',
 		depend: {
-			js: ['bower_components/slick-carousel/slick/slick.min.js']
+			js: ['bower_components/slick-carousel/slick/slick.min.js'],
+			css: ['bower_components/slick-carousel/slick/slick.css']
 		},
 		file: {
 			js: ['s/js/components/js-slick.js']

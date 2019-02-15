@@ -7,6 +7,8 @@ mixin c-series-list(data)
 					span.c-series-list-item__duration= listitem.duration
 					+svg('icon-play-control')
 				.c-series-list-item__info
+					if data.category
+						span.c-series-list-item__category!= data.category
 					a(href="javascript:void(0)").c-series-list-item__info-name= listitem.name
 					.c-series-list-item__info-tag__wrapper
 						.c-series-list-item__info-tag
@@ -15,6 +17,10 @@ mixin c-series-list(data)
 						.c-series-list-item__info-tag
 							+svg('icon-views')
 							span.tag-views= listitem.views
+						if listitem.comments
+							.c-series-list-item__info-tag
+								+svg('icon-comments')
+								span.tag-comments= listitem.comments
 					if listitem.description
 						span.c-series-list-item__info-description= listitem.descriptiontext
 	if data.slickcontrol

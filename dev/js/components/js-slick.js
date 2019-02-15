@@ -97,6 +97,38 @@ $(document).ready(function() {
 		]
 	}
 
+	$('.wn-slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		centerMode: false,
+		infinite: false,
+		prevArrow: '.wn-control-left',
+		nextArrow: '.wn-control-right',
+		speed: 600,
+		cssEase: 'ease-in-out',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1.3,
+					centerMode: false
+				}
+			}
+		]
+	});
+
 	function initSlick() {
 		if(window.innerWidth < 768) {
 			if (!$('.popular-slider').hasClass('slick-initialized')) {

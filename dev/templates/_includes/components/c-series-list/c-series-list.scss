@@ -120,6 +120,12 @@
 		padding: 1px 4px 2px 4px;
 		font-family: $main-font;
 	}
+	&__category {
+		font-size: 10px;
+		color: rgba(145, 151, 166, 0.5);
+		display: block;
+		margin: 6px 0;
+	}
 	&__info {
 		width: calc(100% - 144px);
 		margin-top: 2px;
@@ -177,6 +183,10 @@
 			.icon-views {
 				font-size: 15px;
 				margin: 0 6px 0 0;
+			}
+			.icon-comments {
+				font-size: 13px;
+				margin: 0 4px 0 0;
 			}
 		}
 	}

@@ -1,0 +1,22 @@
+extends _includes/_extends/main
+
+include _includes/components/c-watching-now/c-watching-now
+include _includes/components/c-best-show/c-best-show
+include _includes/components/c-recent-receipts/c-recent-receipts
+
+block head
+    +head({title: 'New Main'})
+
+block header
+    +header({
+        header_first: false,
+        header_second: true
+    })
+
+block content
+    +c-watching-now({
+        oneseasonecontrols: true,
+        slickcontrolmode: 'now-watching-slider slider-init'
+    })
+    +c-best-show()
+    +c-recent-receipts()

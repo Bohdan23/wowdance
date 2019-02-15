@@ -19,7 +19,8 @@ html(lang='en')
 	body
 		+c-preloader()
 		.l-wrapper
-			+header()
+			block header
+				+header()
 			main
 				block content
 					h1.display-1 Hello :)
