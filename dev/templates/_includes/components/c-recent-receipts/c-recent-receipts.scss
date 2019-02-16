@@ -2,6 +2,12 @@
     &-wrapper {
         background-color: #F5F5F7;
         padding: 80px 0;
+        @media (max-width: $sw-md-max) {
+            padding: 65px 0;
+        }
+        @media (max-width: $sw-sm-max) {
+            padding: 40px 0;
+        }
         .c-series-list-item__season {
             height: auto;
             margin-bottom: 40px;
