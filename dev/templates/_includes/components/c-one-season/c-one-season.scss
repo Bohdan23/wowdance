@@ -193,6 +193,7 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
+		z-index: 1;
 		&-wrapper {
 			display:inline-block;
 			min-width: 179px;
@@ -201,21 +202,21 @@
 				width: 100%;
 			}
 			&:after {
-			display: block;
-			border: none;
-			content: '';
-			width: 23px;
-			height: 20px;
-			background-image: url(../../s/images/useful/svg/ic-arrow.svg);
-			background-size: 13px;
-			background-repeat: no-repeat;
-			background-position: left center;
-			background-color: #fff;
-			position: absolute;
-			right: 6px;
-			top: 54%;
-			z-index: -1;
-			margin-top: -10px;
+				display: block;
+				border: none;
+				content: '';
+				width: 23px;
+				height: 12px;
+				background-image: url(../../s/images/useful/svg/ic-arrow.svg);
+				background-size: 13px;
+				background-repeat: no-repeat;
+				background-position: left center;
+				background-color: transparent;
+				position: absolute;
+				right: 6px;
+				top: 50%;
+				z-index: 0;
+				margin-top: -6px;
 			}
 		}
 }

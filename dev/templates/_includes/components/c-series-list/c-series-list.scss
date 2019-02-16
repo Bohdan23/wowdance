@@ -316,6 +316,22 @@
 			&-name {
 				margin-bottom: 9px;
 			}
+			&-tag {
+				@media (max-width: $sw-xx-max) {
+					width: 100%;
+				}
+				& + .c-series-list-item__info-tag {
+					@media (max-width: $sw-xx-max) {
+						margin-left: 0;
+						margin-top: 5px;
+					}
+				}
+				&__wrapper {
+					@media (max-width: $sw-xx-max) {
+						flex-wrap: wrap;
+					}
+				}
+			}
 		}
 		.c-series-list-item__info-description {
 			opacity: 0.8;
