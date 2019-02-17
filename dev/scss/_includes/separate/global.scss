@@ -3,7 +3,9 @@
 	min-height: 100vh;
 	overflow: hidden;
 }
-
+a,button, select, textarea, input {
+	outline: none !important;
+}
 .player-container {
 	margin-top: 80px;
 	@include m(1023) {
