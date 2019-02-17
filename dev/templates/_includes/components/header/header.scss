@@ -17,7 +17,7 @@
     }
     @include m(767) {
         height: auto;
-        padding-bottom: 20px;
+        padding-bottom: 11px;
     }
     &-main__wrapper {
         display: flex;
@@ -37,7 +37,10 @@
                 }
             }
             .icon-logo {
-                font-size: 4.1rem;
+                font-size: 2.9rem;
+                @media (max-width: $sw-xs-max) {
+                    font-size: 35px;
+                }
             }
         }
         @include m(767) {
@@ -46,7 +49,7 @@
             .logo__wrapper {
                 width: 100%;
                 justify-content: center;
-                margin: 12px 0 17px 0;
+                margin: 12px 0 14px 0;
                 .icon-logo {
                     font-size: 128px;
                     height: 40px;

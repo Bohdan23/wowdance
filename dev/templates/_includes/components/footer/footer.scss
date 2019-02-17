@@ -88,26 +88,18 @@
     }
     &__logo-wrapper {
         .icon-logo-footer {
-            font-size: 247px;
-            height: 64px;
+            font-size: 62px;
             margin-top: -19px;
         }
     	@include m(1279) {
 			text-align: center;
             .icon-logo-footer {
-                font-size: 220px;
-                height: 66px;
-                margin-top: -23px;
-            }
-    	}
-    	@include m(1023) {
-			.icon-logo-footer {
-                font-size: 175px;
+				margin-top: -13px;
             }
     	}
         @include m(768) {
-            .icon-logo-footer {
-                font-size: 167px;
+			.icon-logo-footer {
+				font-size: 36px;
             }
         }
     }
