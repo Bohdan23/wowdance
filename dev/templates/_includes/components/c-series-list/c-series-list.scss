@@ -161,17 +161,20 @@
 			line-height: 1.1428rem;
 			display: flex;
 			align-items: center;
-			font-family: $main-font;
-			& + .c-series-list-item__info-tag {
-				margin-left: 14px;
-				@include m(1023) {
-					margin-left: 11px;
-				}
+			font-family: $main-font;	
+			margin-right: 9px;
+			margin-bottom: 7px;
+			@include m(1023) {
+				margin-right: 11px;
+			}
+			@media (max-width: $sw-xx-max) {
+				margin-bottom: 2px;
 			}
 			&__wrapper {
 				display: flex;
 				align-items: center;
 				margin-top: 6px;
+				flex-wrap: wrap;
 			}
 			.icon {
 				color: $main-grey;
@@ -186,7 +189,7 @@
 			}
 			.icon-comments {
 				font-size: 13px;
-				margin: 0 4px 0 0;
+				margin: 0 4px 0 2px;
 			}
 		}
 	}
@@ -295,6 +298,9 @@
 			height: 74px;
 			margin-right: 0;
 			margin-bottom: 2px;
+			@media (max-width: $sw-xx-max) {
+				margin-bottom: 10px;
+			}
 		}
 		.c-series-list-item__image {
 			width: 100%;
@@ -315,15 +321,15 @@
 			width: 100%;
 			&-name {
 				margin-bottom: 9px;
+				@media (max-width: $sw-xx-max) {
+					margin-bottom: 2px;
+				}
 			}
 			&-tag {
-				@media (max-width: $sw-xx-max) {
-					width: 100%;
-				}
 				& + .c-series-list-item__info-tag {
 					@media (max-width: $sw-xx-max) {
 						margin-left: 0;
-						margin-top: 5px;
+						margin-top: 2px;
 					}
 				}
 				&__wrapper {

@@ -63,6 +63,20 @@ if($('.c-series-list-item__info-name').length) {
 	});
 }
 
+if ($('.js-line-clamp').length) {
+	Moff.amd.register({
+		id: 'line_clamp',
+		depend: {
+			js: ['s/js/lib/line-clamp.js']
+		},
+		file: {
+			js: ['s/js/components/js-line-clamp.js']
+		},
+		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
+		onWindowLoad: true
+	});
+}
+
 if($('.c-footer__accordeon-text').length) {
 	Moff.amd.register({
 		id: 'readMore',

@@ -44,9 +44,15 @@
 			&-left {
 				margin-right: 12px;
 				padding-left: 2px;
+				@media (max-width: $sw-xs-max) {
+					transform: rotate(-90deg);
+				}
 			}
 			&-right {
 				padding-left: 1px;
+				@media (max-width: $sw-xs-max) {
+					transform: rotate(90deg);
+				}
 			}
 		}
 		@include m(767) {
