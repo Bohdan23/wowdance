@@ -33,6 +33,11 @@
 				display: none;
 			}
 		}
+		.slick-control-left {
+			@media (max-width: $sw-sm-max) {
+				margin-right: 32px !important;
+			}
+		}
 	}
 }
 .banner__wrapper {

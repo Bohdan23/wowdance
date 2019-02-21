@@ -10,6 +10,16 @@
 				font-size: 1.3rem;
 			}
 		}
+		.slick-control-left {
+			@media (max-width: $sw-xs-max) {
+				transform: rotate(-90deg);
+			}
+		}
+		.slick-control-right {
+			@media (max-width: $sw-xs-max) {
+				transform: rotate(90deg);
+			}
+		}
 	}
 	&__wrapper {
 		position: relative;
@@ -44,15 +54,9 @@
 			&-left {
 				margin-right: 12px;
 				padding-left: 2px;
-				@media (max-width: $sw-xs-max) {
-					transform: rotate(-90deg);
-				}
 			}
 			&-right {
 				padding-left: 1px;
-				@media (max-width: $sw-xs-max) {
-					transform: rotate(90deg);
-				}
 			}
 		}
 		@include m(767) {

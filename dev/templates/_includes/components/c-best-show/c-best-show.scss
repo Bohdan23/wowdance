@@ -21,9 +21,7 @@
             height: 313px;
             padding: 8px 12px;
         }
-        // border: 1px solid red;
         &-inner {
-            // border: 1px solid blue;
             height: 100%;
             border-radius: 8px;
             overflow: hidden;
@@ -33,8 +31,10 @@
             justify-content: center;
             text-align: center;
             &:hover {
-                .bs-block-img img {
-                    transform: scale(1.1);
+                @media (min-width: $sw-sm-min) {
+                    .bs-block-img img {
+                        transform: scale(1.1);
+                    }
                 }
             }
         }
@@ -55,7 +55,7 @@
                 border-radius: inherit;
             }
             img {
-                transition: transform .6s linear;
+                transition: transform .6s ease;
             }
         }
         &-name {
