@@ -1,21 +1,21 @@
 .error {
     &-wrapper {
         background-color: $main-blue;
-        height: calc(100vh - 80px);
+        min-height: calc(100vh - 80px);
         display: flex;
         align-items: center;
         justify-content: center;
         @media (max-width: $sw-sm-max) {
-            height: calc(100vh - 248px);
+            min-height: calc(100vh - 248px);
         }
         @media (max-width: $sw-xs-max) {
-            height: calc(100vh - 293px);
+            min-height: calc(100vh - 284px);
         }
     }
     &-inner {
         width: 100%;
         max-width: 540px;
-        margin: 0 auto;
+        margin: 64px auto 72px auto;
         .icon-frames {
             font-size: 48px;
             margin-bottom: 31px;
