@@ -1,12 +1,11 @@
 button{
-    // button reset
     display: inline-block;
     margin: 0;
     padding: 0;
     border: 0;
     background-color: transparent;
 }
-.btn{
+.btn {
     display: inline-block;
     height: 51px;
     border-radius: 11px;
@@ -17,32 +16,4 @@ button{
     background-color: transparent;
     color: inherit;
     transition: all 300ms ease;
-    &:hover{
-        
-        // border-color: @White40;
-        // background-color: @White80;
-        // color: @CapeCod;
-    }
-    &:focus,
-    &:active{
-        // border-color: @White40;
-        // background-color: @Concrete;
-        // color: @CapeCod;
-    }
-    // colors
-    &_white{
-    }
-    // states
-    // a&{
-    //     text-decoration: none;
-    // }
-    &_icon{
-    }
-    // sizes
-    &_md{
-    }
-    &_sm{
-    }
-    &_xs{
-    }
 }

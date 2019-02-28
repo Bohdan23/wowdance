@@ -1,0 +1,67 @@
+.stub {
+	&-wrapper {
+		width: 100vw;
+		height: 100vh;
+        background-color: $main-blue;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:before, &:after {
+            content: '';
+            display: block;
+            position: absolute;
+        }
+        &:before {
+            top: 0;
+            right: 0;
+            background-image: url('../../s/images/useful/rectangle-top.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 334px;
+            width: 334px;
+            @include m(1023) {
+                width: 165px;
+                height: 165px;
+            }
+        }
+        &:after {
+            top: 151px;
+            left: 0;
+            background-image: url('../../s/images/useful/rectangle-down.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 236px;
+            width: 229px;
+            @include m(1023) {
+                width: 145px;
+                height: 145px;
+            }
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    &-inner {
+        width: 100%;
+        max-width: 635px;
+        margin: 0 auto;
+    }
+    &-logo {
+        margin-bottom: 40px;
+        text-align: center;
+        @media (max-width: $sw-xs-max) {
+            margin-bottom: 25px;
+        }
+        .icon {
+            font-size: 63px;
+        }
+    }
+    &-info {
+        text-align: center;
+        font-size: 22px;
+        color: #ffffff;
+        font-weight: 600;
+    }
+}

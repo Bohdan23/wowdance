@@ -1,0 +1,22 @@
+extends _includes/_extends/main
+
+include _includes/components/c-hero/c-hero
+include _includes/components/c-404/c-404
+
+block head
+	+head({title: '404'})
+
+block header
+	+header({
+		header_first: false,
+		header_second: true
+	})
+
+block content
+	+c-404()
+
+block footer
+	+footer({
+		footer_lg: false,
+		footer_simple: true
+	})

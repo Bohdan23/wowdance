@@ -237,3 +237,113 @@
         background: transparent;
     }
 }
+
+// footer simple
+.footer {
+	&-simple {
+		height: 80px;
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: $sw-sm-max) {
+			flex-wrap: wrap;
+			height: auto;
+			padding: 8px 0 31px 0;
+		}
+		@media (max-width: $sw-xs-max) {
+			padding: 8px 0 39px 0;
+		}
+		&-wrap {
+			background-color: #16181D;
+			position: relative;
+			overflow: hidden;
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-right-width: 0px;
+				border-left-width: 33.5vw;
+				border-top: 33.5vw solid #1554C4;
+				@media (max-width: $sw-md-max) {
+					border-left-width: 35.5vw;
+					border-top: 35.5vw solid #1554C4;
+				}
+				@media (max-width: $sw-sm-max) {
+					border-left-width: 43.5vw;
+					border-top: 43.5vw solid #1554C4;
+				}
+				@media (max-width: $sw-xs-max) {
+					border-left-width: 34.5vw;
+					border-top: 34.5vw solid #1554C4;
+				}	
+			}
+			.container {
+				position: relative;
+				z-index: 1;
+			}
+		}
+	}
+	&-logo {
+		&-wrap {
+			// border: 1px solid red;
+			display: inline-flex;
+			height: 100%;
+			align-items: flex-start;
+			padding-top: 11px;
+			@media (max-width: $sw-sm-max) {
+				width: 100%;
+				display: flex;
+				height: auto;
+				justify-content: center;
+				margin-bottom: 24px;
+				padding-left: 21px;
+			}
+			.icon {
+				flex-shrink: 0;
+				font-size: 41px;
+			}
+		}
+	}
+	&-text {
+		font-size: 18px;
+        color: #ffffff;
+        font-weight: 400;
+        @media (max-width: $sw-xs-max) {
+            font-size: 16px;
+        }
+		&-wrap {
+			// border: 1px solid blue;
+			display: flex;
+			align-items: center;
+			margin-right: auto;
+			margin-left: 175px;
+			@media (max-width: $sw-md-max) {
+				margin-left: 137px;
+			}
+			@media (max-width: $sw-sm-max) {
+				width: 100%;
+				margin-left: auto;
+				justify-content: center;
+				margin-bottom: 16px;
+				text-align: center;
+			}
+			@media (max-width: $sw-xs-max) {
+				margin-bottom: 24px;
+			}
+		}
+	}
+	&-copy {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		color: rgba(255,255,255,.5);
+		@media (max-width: $sw-sm-max) {
+			width: 100%;
+			justify-content: center;
+		}
+	}
+}
