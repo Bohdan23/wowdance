@@ -99,5 +99,8 @@
 			<rect opacity="0.3" x="32" y="32" width="16" height="16" rx="8" fill="white"/>
 			<rect opacity="0.5" x="32" width="16" height="16" rx="8" fill="white"/>
         </symbol>
+       	<symbol id="icon-playing-now" viewBox="0 0 386 446">
+            <path fill="currentColor" d="M 0,446 0,0 386,223 Z"/>
+        </symbol>
     </defs>
 </svg>

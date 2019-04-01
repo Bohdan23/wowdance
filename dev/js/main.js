@@ -77,6 +77,23 @@ if ($('.js-line-clamp').length) {
 	});
 }
 
+if($('.js-scrollbar').length) {
+	Moff.amd.register({
+		id: 'scrollbar',
+		depend: {
+			js: ['s/js/lib/jquery.scrollbar.min.js']
+		},
+
+		beforeInclude: function() {},
+		afterInclude: function() {
+			$('.player-list-content').scrollbar();
+		},
+			
+		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
+		onWindowLoad: true
+	});
+}
+
 if($('.c-footer__accordeon-text').length) {
 	Moff.amd.register({
 		id: 'readMore',

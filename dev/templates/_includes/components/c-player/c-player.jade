@@ -1,0 +1,36 @@
+mixin c-player(data)
+	.player-wrapper
+		.player-inner
+			iframe#rutubeFrame1(width='720', height='405', src='//rutube.ru/play/embed/7096490?sAuthor=false', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+		.player-list.js-scrollbar
+			.player-list-header
+				span Выступления
+				label(for="speeches_init")
+					input(type="checkbox", id="speeches_init", checked="")
+					.player-list-label-box
+			.player-list-content.scrollbar-outer
+				+c-player-item()
+				+c-player-item()
+				+c-player-item()
+				+c-player-item()
+				+c-player-item()
+
+mixin c-player-item(data)
+	a.player-list-item(href="javascript:void(0)")
+		.player-list-image
+			img(src="s/images/tmp_file/series-list/3.jpg", alt="video")
+			span.playing-now
+				+svg('icon-playing-now')
+			span.player-list-item-duration 00:20
+		.player-list-descr
+			p.player-list-name Танцы: Саша Горошко (Leela James - Soul Food) (сезонище)
+			.c-series-list-item__info-tag__wrapper
+				.c-series-list-item__info-tag
+					+svg('icon-calendar')
+					span.tag-date 20 июня
+				.c-series-list-item__info-tag
+					+svg('icon-views')
+					span.tag-views 341
+				.c-series-list-item__info-tag
+					+svg('icon-comments')
+					span.tag-comments 24
