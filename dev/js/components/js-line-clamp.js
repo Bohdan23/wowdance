@@ -5,4 +5,11 @@ $(document).ready(function() {
             $clamp(item, {clamp: 2});
         });
     }
+
+    if ($('.player-list-name').length) {
+        $('.player-list-name').each(function(i, item) {
+            var item = $(this).get(0);
+            $clamp(item, {clamp: 2});
+        });
+    }
 });
