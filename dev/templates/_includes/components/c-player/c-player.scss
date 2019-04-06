@@ -49,6 +49,9 @@
             @media (max-width: $sw-md-max) {
                 padding: 20px 20px 0 26px !important;
             }
+            @media (max-width: $sw-xx-max) {
+                padding: 10px 10px 0 10px !important;
+            }
         }
         &-header {
             padding: 24px 27px 24px 35px;
@@ -114,13 +117,9 @@
             }
         }
         &-content {
-            // padding: 20px 48px 0 48px;
             max-height: 336px;
             @media (max-width: $sw-md-max) {
                 max-height: 335px;
-            }
-            @media (max-width: $sw-sm-max) {
-                display: none;
             }
         }
         &-item {
@@ -145,6 +144,19 @@
                 width: 110px;
                 height: 60px;
             }
+            @media (max-width: $sw-sm-max) {
+                width: 160px;
+                height: 90px;
+            }
+            @media (max-width: $sw-xs-max) {
+                width: 140px;
+                height: 80px;
+            }
+            @media (max-width: $sw-xx-max) {
+                width: 100px;
+                height: 60px;
+                margin-right: 11px;
+            }
             .playing-now {
                 position: absolute;
                 left: 0;
@@ -161,6 +173,9 @@
         &-name {
             @extend .c-series-list-item__info-name;
             color: #fff;
+            @media (max-width: $sw-sm-max) {
+                margin-bottom: 10px;
+            }
         }
     }
 }
